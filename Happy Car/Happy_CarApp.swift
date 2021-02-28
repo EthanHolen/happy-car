@@ -13,7 +13,7 @@ struct Happy_CarApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Homepage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
