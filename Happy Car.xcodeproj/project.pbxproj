@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA8229D125EB171D00FCE4AC /* Happy_CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */; };
-		DA8229D325EB171D00FCE4AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D225EB171D00FCE4AC /* ContentView.swift */; };
+		DA8229D325EB171D00FCE4AC /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D225EB171D00FCE4AC /* Homepage.swift */; };
 		DA8229D525EB171F00FCE4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8229D425EB171F00FCE4AC /* Assets.xcassets */; };
 		DA8229D825EB171F00FCE4AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8229D725EB171F00FCE4AC /* Preview Assets.xcassets */; };
 		DA8229DA25EB171F00FCE4AC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D925EB171F00FCE4AC /* Persistence.swift */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		DA8229CD25EB171D00FCE4AC /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarApp.swift; sourceTree = "<group>"; };
-		DA8229D225EB171D00FCE4AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA8229D225EB171D00FCE4AC /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		DA8229D425EB171F00FCE4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8229D725EB171F00FCE4AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA8229D925EB171F00FCE4AC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */,
-				DA8229D225EB171D00FCE4AC /* ContentView.swift */,
+				DA8229D225EB171D00FCE4AC /* Homepage.swift */,
 				DA8229D425EB171F00FCE4AC /* Assets.xcassets */,
 				DA8229D925EB171F00FCE4AC /* Persistence.swift */,
 				DA8229DE25EB171F00FCE4AC /* Info.plist */,
@@ -146,7 +146,7 @@
 			files = (
 				DA8229DA25EB171F00FCE4AC /* Persistence.swift in Sources */,
 				DA8229DD25EB171F00FCE4AC /* Happy_Car.xcdatamodeld in Sources */,
-				DA8229D325EB171D00FCE4AC /* ContentView.swift in Sources */,
+				DA8229D325EB171D00FCE4AC /* Homepage.swift in Sources */,
 				DA8229D125EB171D00FCE4AC /* Happy_CarApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
