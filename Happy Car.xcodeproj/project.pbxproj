@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DA8229D125EB171D00FCE4AC /* Happy_CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */; };
-		DA8229D325EB171D00FCE4AC /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D225EB171D00FCE4AC /* Homepage.swift */; };
-		DA8229D525EB171F00FCE4AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8229D425EB171F00FCE4AC /* Assets.xcassets */; };
-		DA8229D825EB171F00FCE4AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8229D725EB171F00FCE4AC /* Preview Assets.xcassets */; };
-		DA8229DA25EB171F00FCE4AC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8229D925EB171F00FCE4AC /* Persistence.swift */; };
-		DA8229DD25EB171F00FCE4AC /* Happy_Car.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA8229DB25EB171F00FCE4AC /* Happy_Car.xcdatamodeld */; };
+		DA0FE3E325F58ECF00748FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */; };
+		DA0FE3E525F58ECF00748FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */; };
+		DA0FE3E725F58ECF00748FCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E625F58ECF00748FCE /* ContentView.swift */; };
+		DA0FE3EA25F58ECF00748FCE /* Happy_Car.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E825F58ECF00748FCE /* Happy_Car.xcdatamodeld */; };
+		DA0FE3EC25F58ED000748FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EB25F58ED000748FCE /* Assets.xcassets */; };
+		DA0FE3EF25F58ED000748FCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */; };
+		DA0FE3F225F58ED000748FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DA8229CD25EB171D00FCE4AC /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarApp.swift; sourceTree = "<group>"; };
-		DA8229D225EB171D00FCE4AC /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
-		DA8229D425EB171F00FCE4AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DA8229D725EB171F00FCE4AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DA8229D925EB171F00FCE4AC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		DA8229DC25EB171F00FCE4AC /* Happy_Car.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy_Car.xcdatamodel; sourceTree = "<group>"; };
-		DA8229DE25EB171F00FCE4AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0FE3DF25F58ECF00748FCE /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA0FE3E625F58ECF00748FCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA0FE3E925F58ECF00748FCE /* Happy_Car.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy_Car.xcdatamodel; sourceTree = "<group>"; };
+		DA0FE3EB25F58ED000748FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DA0FE3F125F58ED000748FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA0FE3F325F58ED000748FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DA8229CA25EB171D00FCE4AC /* Frameworks */ = {
+		DA0FE3DC25F58ECF00748FCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DA8229C425EB171D00FCE4AC = {
+		DA0FE3D625F58ECF00748FCE = {
 			isa = PBXGroup;
 			children = (
-				DA8229CF25EB171D00FCE4AC /* Happy Car */,
-				DA8229CE25EB171D00FCE4AC /* Products */,
+				DA0FE3E125F58ECF00748FCE /* Happy Car */,
+				DA0FE3E025F58ECF00748FCE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DA8229CE25EB171D00FCE4AC /* Products */ = {
+		DA0FE3E025F58ECF00748FCE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA8229CD25EB171D00FCE4AC /* Happy Car.app */,
+				DA0FE3DF25F58ECF00748FCE /* Happy Car.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA8229CF25EB171D00FCE4AC /* Happy Car */ = {
+		DA0FE3E125F58ECF00748FCE /* Happy Car */ = {
 			isa = PBXGroup;
 			children = (
-				DA8229D025EB171D00FCE4AC /* Happy_CarApp.swift */,
-				DA8229D225EB171D00FCE4AC /* Homepage.swift */,
-				DA8229D425EB171F00FCE4AC /* Assets.xcassets */,
-				DA8229D925EB171F00FCE4AC /* Persistence.swift */,
-				DA8229DE25EB171F00FCE4AC /* Info.plist */,
-				DA8229DB25EB171F00FCE4AC /* Happy_Car.xcdatamodeld */,
-				DA8229D625EB171F00FCE4AC /* Preview Content */,
+				DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */,
+				DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */,
+				DA0FE3E625F58ECF00748FCE /* ContentView.swift */,
+				DA0FE3EB25F58ED000748FCE /* Assets.xcassets */,
+				DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */,
+				DA0FE3F325F58ED000748FCE /* Info.plist */,
+				DA0FE3E825F58ECF00748FCE /* Happy_Car.xcdatamodeld */,
+				DA0FE3ED25F58ED000748FCE /* Preview Content */,
 			);
 			path = "Happy Car";
 			sourceTree = "<group>";
 		};
-		DA8229D625EB171F00FCE4AC /* Preview Content */ = {
+		DA0FE3ED25F58ED000748FCE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				DA8229D725EB171F00FCE4AC /* Preview Assets.xcassets */,
+				DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,13 +81,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA8229CC25EB171D00FCE4AC /* Happy Car */ = {
+		DA0FE3DE25F58ECF00748FCE /* Happy Car */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA8229E125EB171F00FCE4AC /* Build configuration list for PBXNativeTarget "Happy Car" */;
+			buildConfigurationList = DA0FE3F625F58ED000748FCE /* Build configuration list for PBXNativeTarget "Happy Car" */;
 			buildPhases = (
-				DA8229C925EB171D00FCE4AC /* Sources */,
-				DA8229CA25EB171D00FCE4AC /* Frameworks */,
-				DA8229CB25EB171D00FCE4AC /* Resources */,
+				DA0FE3DB25F58ECF00748FCE /* Sources */,
+				DA0FE3DC25F58ECF00748FCE /* Frameworks */,
+				DA0FE3DD25F58ECF00748FCE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,24 +95,24 @@
 			);
 			name = "Happy Car";
 			productName = "Happy Car";
-			productReference = DA8229CD25EB171D00FCE4AC /* Happy Car.app */;
+			productReference = DA0FE3DF25F58ECF00748FCE /* Happy Car.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DA8229C525EB171D00FCE4AC /* Project object */ = {
+		DA0FE3D725F58ECF00748FCE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					DA8229CC25EB171D00FCE4AC = {
+					DA0FE3DE25F58ECF00748FCE = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = DA8229C825EB171D00FCE4AC /* Build configuration list for PBXProject "Happy Car" */;
+			buildConfigurationList = DA0FE3DA25F58ECF00748FCE /* Build configuration list for PBXProject "Happy Car" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,44 +120,56 @@
 				en,
 				Base,
 			);
-			mainGroup = DA8229C425EB171D00FCE4AC;
-			productRefGroup = DA8229CE25EB171D00FCE4AC /* Products */;
+			mainGroup = DA0FE3D625F58ECF00748FCE;
+			productRefGroup = DA0FE3E025F58ECF00748FCE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DA8229CC25EB171D00FCE4AC /* Happy Car */,
+				DA0FE3DE25F58ECF00748FCE /* Happy Car */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DA8229CB25EB171D00FCE4AC /* Resources */ = {
+		DA0FE3DD25F58ECF00748FCE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8229D825EB171F00FCE4AC /* Preview Assets.xcassets in Resources */,
-				DA8229D525EB171F00FCE4AC /* Assets.xcassets in Resources */,
+				DA0FE3F225F58ED000748FCE /* LaunchScreen.storyboard in Resources */,
+				DA0FE3EF25F58ED000748FCE /* Preview Assets.xcassets in Resources */,
+				DA0FE3EC25F58ED000748FCE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DA8229C925EB171D00FCE4AC /* Sources */ = {
+		DA0FE3DB25F58ECF00748FCE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8229DA25EB171F00FCE4AC /* Persistence.swift in Sources */,
-				DA8229DD25EB171F00FCE4AC /* Happy_Car.xcdatamodeld in Sources */,
-				DA8229D325EB171D00FCE4AC /* Homepage.swift in Sources */,
-				DA8229D125EB171D00FCE4AC /* Happy_CarApp.swift in Sources */,
+				DA0FE3E325F58ECF00748FCE /* AppDelegate.swift in Sources */,
+				DA0FE3EA25F58ECF00748FCE /* Happy_Car.xcdatamodeld in Sources */,
+				DA0FE3E525F58ECF00748FCE /* SceneDelegate.swift in Sources */,
+				DA0FE3E725F58ECF00748FCE /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA0FE3F125F58ED000748FCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		DA8229DF25EB171F00FCE4AC /* Debug */ = {
+		DA0FE3F425F58ED000748FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		DA8229E025EB171F00FCE4AC /* Release */ = {
+		DA0FE3F525F58ED000748FCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,7 +285,7 @@
 			};
 			name = Release;
 		};
-		DA8229E225EB171F00FCE4AC /* Debug */ = {
+		DA0FE3F725F58ED000748FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -280,7 +295,6 @@
 				DEVELOPMENT_TEAM = HFN7HCJ656;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Happy Car/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +306,7 @@
 			};
 			name = Debug;
 		};
-		DA8229E325EB171F00FCE4AC /* Release */ = {
+		DA0FE3F825F58ED000748FCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -302,7 +316,6 @@
 				DEVELOPMENT_TEAM = HFN7HCJ656;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Happy Car/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,20 +330,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA8229C825EB171D00FCE4AC /* Build configuration list for PBXProject "Happy Car" */ = {
+		DA0FE3DA25F58ECF00748FCE /* Build configuration list for PBXProject "Happy Car" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA8229DF25EB171F00FCE4AC /* Debug */,
-				DA8229E025EB171F00FCE4AC /* Release */,
+				DA0FE3F425F58ED000748FCE /* Debug */,
+				DA0FE3F525F58ED000748FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA8229E125EB171F00FCE4AC /* Build configuration list for PBXNativeTarget "Happy Car" */ = {
+		DA0FE3F625F58ED000748FCE /* Build configuration list for PBXNativeTarget "Happy Car" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DA8229E225EB171F00FCE4AC /* Debug */,
-				DA8229E325EB171F00FCE4AC /* Release */,
+				DA0FE3F725F58ED000748FCE /* Debug */,
+				DA0FE3F825F58ED000748FCE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -338,17 +351,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		DA8229DB25EB171F00FCE4AC /* Happy_Car.xcdatamodeld */ = {
+		DA0FE3E825F58ECF00748FCE /* Happy_Car.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				DA8229DC25EB171F00FCE4AC /* Happy_Car.xcdatamodel */,
+				DA0FE3E925F58ECF00748FCE /* Happy_Car.xcdatamodel */,
 			);
-			currentVersion = DA8229DC25EB171F00FCE4AC /* Happy_Car.xcdatamodel */;
+			currentVersion = DA0FE3E925F58ECF00748FCE /* Happy_Car.xcdatamodel */;
 			path = Happy_Car.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = DA8229C525EB171D00FCE4AC /* Project object */;
+	rootObject = DA0FE3D725F58ECF00748FCE /* Project object */;
 }
