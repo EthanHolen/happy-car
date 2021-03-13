@@ -9,8 +9,15 @@ import SwiftUI
 
 struct Homepage: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack{
+                
+                Text("Welcome to your happy car!")
+                
+            }
+            .navigationBarTitle(Text("Happy Car"))
+            
+        }
     }
 }
 
