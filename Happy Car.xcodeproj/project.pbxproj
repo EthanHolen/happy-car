@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA0FE3E325F58ECF00748FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */; };
 		DA0FE3E525F58ECF00748FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */; };
-		DA0FE3E725F58ECF00748FCE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E625F58ECF00748FCE /* ContentView.swift */; };
+		DA0FE3E725F58ECF00748FCE /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E625F58ECF00748FCE /* Homepage.swift */; };
 		DA0FE3EA25F58ECF00748FCE /* Happy_Car.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E825F58ECF00748FCE /* Happy_Car.xcdatamodeld */; };
 		DA0FE3EC25F58ED000748FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EB25F58ED000748FCE /* Assets.xcassets */; };
 		DA0FE3EF25F58ED000748FCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */; };
@@ -24,7 +24,7 @@
 		DA0FE3DF25F58ECF00748FCE /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA0FE3E625F58ECF00748FCE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DA0FE3E625F58ECF00748FCE /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		DA0FE3E925F58ECF00748FCE /* Happy_Car.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Happy_Car.xcdatamodel; sourceTree = "<group>"; };
 		DA0FE3EB25F58ED000748FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				DAAED33025FD3B140059B0BF /* Vehicle+CoreDataProperties.swift */,
 				DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */,
 				DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */,
-				DA0FE3E625F58ECF00748FCE /* ContentView.swift */,
+				DA0FE3E625F58ECF00748FCE /* Homepage.swift */,
 				DA0FE3EB25F58ED000748FCE /* Assets.xcassets */,
 				DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */,
 				DA0FE3F325F58ED000748FCE /* Info.plist */,
@@ -167,7 +167,7 @@
 				DAAED33425FD3B140059B0BF /* Vehicle+CoreDataProperties.swift in Sources */,
 				DA0FE3E525F58ECF00748FCE /* SceneDelegate.swift in Sources */,
 				DAAED33125FD3B140059B0BF /* Document+CoreDataClass.swift in Sources */,
-				DA0FE3E725F58ECF00748FCE /* ContentView.swift in Sources */,
+				DA0FE3E725F58ECF00748FCE /* Homepage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
