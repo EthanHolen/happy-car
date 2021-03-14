@@ -20,6 +20,17 @@ extension Document {
     @NSManaged public var note: String?
     @NSManaged public var type: String?
     @NSManaged public var vehicle: Vehicle?
+    
+    public var wrappedType: String {
+        type ?? "Unknown Type"
+    }
+    
+    public var wrappedNote: String {
+        note ?? "Empty Note"
+    }
+    
+    
+    
 
 }
 

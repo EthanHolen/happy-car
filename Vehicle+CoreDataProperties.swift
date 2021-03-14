@@ -20,6 +20,26 @@ extension Vehicle {
     @NSManaged public var model: String?
     @NSManaged public var name: String?
     @NSManaged public var document: NSSet?
+    
+    
+    public var wrappedName: String {
+        name ?? "Unknown Name"
+    }
+    public var wrappedMake: String {
+        make ?? "Unknown Make"
+    }
+    public var wrappedModel: String {
+        model ?? "Unknown Model"
+    }
+    
+    public var documentArray: [Document] {
+        let set = document as? Set<Document> ?? []
+        
+        return set.sorted {
+            $0.wrappedType  < $1.wrappedType
+        }
+        
+    }
 
 }
 
