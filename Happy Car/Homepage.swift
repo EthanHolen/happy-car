@@ -18,27 +18,59 @@ struct Homepage: View {
             VStack{
                 List {
                     ForEach(vehicles, id:\.self){ vehicle in
-                        NavigationLink(destination: Text(vehicle.wrappedName)) {
+                        NavigationLink(destination: VehicleView(vehicle: vehicle)) {
                             Text(vehicle.wrappedName)
                         }
                     }
                 }
-                Button("ADD"){
+                Button("FILL"){
                     
-                    let vehicle1  = Vehicle(context: self.moc)
-                    vehicle1.name = "Maggie"
-                    vehicle1.make = "Honda"
-                    vehicle1.model = "Accord"
+                    let maggie  = Vehicle(context: self.moc)
+                    maggie.name = "Maggie"
+                    maggie.make = "Honda"
+                    maggie.model = "Accord"
                     
-                    let vehicle2  = Vehicle(context: self.moc)
-                    vehicle2.name = "Oliver"
-                    vehicle2.make = "Nissan"
-                    vehicle2.model = "Altima"
+                    let maggieReg = Document(context: self.moc)
+                    maggieReg.type = "Registration"
+                    maggieReg.note = "reg note"
+                    maggieReg.vehicle = maggie
                     
-                    let vehicle3  = Vehicle(context: self.moc)
-                    vehicle3.name = "Quincy"
-                    vehicle3.make = "Nissan"
-                    vehicle3.model = "Murano"
+                    let maggieIns = Document(context: self.moc)
+                    maggieIns.type = "Insurance"
+                    maggieIns.note = "ins note"
+                    maggieIns.vehicle = maggie
+                    
+                    //-------
+                    let oliver  = Vehicle(context: self.moc)
+                    oliver.name = "Oliver"
+                    oliver.make = "Nissan"
+                    oliver.model = "Altima"
+                    
+                    let oliverReg = Document(context: self.moc)
+                    oliverReg.type = "Registration"
+                    oliverReg.note = "reg note"
+                    oliverReg.vehicle = oliver
+                    
+                    let oliverIns = Document(context: self.moc)
+                    oliverIns.type = "Insurance"
+                    oliverIns.note = "ins note"
+                    oliverIns.vehicle = oliver
+                    
+                    //-------
+                    let quincy  = Vehicle(context: self.moc)
+                    quincy.name = "Quincy"
+                    quincy.make = "Nissan"
+                    quincy.model = "Murano"
+                    
+                    let quincyReg = Document(context: self.moc)
+                    quincyReg.type = "Registration"
+                    quincyReg.note = "reg note"
+                    quincyReg.vehicle = quincy
+                    
+                    let quincyIns = Document(context: self.moc)
+                    quincyIns.type = "Insurance"
+                    quincyIns.note = "ins note"
+                    quincyIns.vehicle = quincy
                     
                     if self.moc.hasChanges  {
                         try? self.moc.save()
