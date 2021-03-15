@@ -22,9 +22,11 @@ struct Homepage: View {
                             Text(vehicle.wrappedName)
                         }
                     }
+                    .onDelete(perform: deleteVehicles)
+                
                 }
                 Button("FILL"){
-                    
+
                     let maggie  = Vehicle(context: self.moc)
                     maggie.name = "Maggie"
                     maggie.make = "Honda"
@@ -79,9 +81,28 @@ struct Homepage: View {
                 }
             }
             .navigationBarTitle("Happy Car")
+            .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+                
+            }, label: {
+                Image(systemName: "plus")
+            }))
             
             
         }
+    }
+    
+    func deleteVehicles(at offsets: IndexSet)  {
+        for offset in offsets  {
+            
+            let vehicle = vehicles[offset]
+            
+            moc.delete(vehicle)
+        }
+        
+        if self.moc.hasChanges {
+            try? self.moc.save()
+        }
+        
     }
 }
 
