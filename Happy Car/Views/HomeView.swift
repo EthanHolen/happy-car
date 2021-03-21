@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Homepage: View {
+struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Vehicle.entity(), sortDescriptors: []) var vehicles:
         FetchedResults<Vehicle>
@@ -105,6 +105,6 @@ struct Homepage: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Homepage()
+        HomeView()
     }
 }
