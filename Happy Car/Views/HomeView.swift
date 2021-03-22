@@ -20,7 +20,7 @@ struct HomeView: View {
             VStack{
                 List {
                     ForEach(vehicles, id:\.self){ vehicle in
-                        NavigationLink(destination: VehicleView(vehicle: vehicle)) {
+                        NavigationLink(destination: VehicleView(vehicleName:  vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
                             Text(vehicle.wrappedName)
                         }
                     }
@@ -36,7 +36,7 @@ struct HomeView: View {
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {
                 self.showingAddVehicleScreen.toggle()
             }, label: {
-                Image(systemName: "plus")
+                Text("New Vehicle")
             }))
             .sheet(isPresented: $showingAddVehicleScreen
                    , content: {

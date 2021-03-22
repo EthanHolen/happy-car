@@ -10,24 +10,52 @@ import CoreData
 
 struct VehicleView: View {
     
-    var vehicle: Vehicle
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(entity: Document.entity(), sortDescriptors: []) var documents:
+        FetchedResults<Document>
+    
+    var vehicleName: String
     
     var body: some View {
         
         VStack{
-            Text(vehicle.wrappedMake)
-            Text(vehicle.wrappedModel)
+//            Text(vehicle.wrappedMake)
+//            Text(vehicle.wrappedModel)
             List{
-                ForEach(vehicle.documentArray, id: \.self){ document in
-                    NavigationLink(destination: Text(document.wrappedNote)) {
-                        Text(document.wrappedType)
+                ForEach(documents, id: \.self){ doc in
+                    if doc.vehicle?.wrappedName == vehicleName{
+                        NavigationLink(destination: Text(doc.wrappedNote)){
+                            Text(doc.wrappedType)
+                        }
                     }
+                    
                 }
+                .onDelete(perform: deleteDocuments)
             }
         }
-        .navigationBarTitle(vehicle.wrappedName)
+        .navigationBarTitle(vehicleName)
+        .navigationBarItems(trailing: Button(action: {
+            //  addDocumentView here
+        }, label: {
+            Text("New Document")
+        }))
         
 
+        
+
+    }
+    
+    func deleteDocuments(at offsets: IndexSet) {
+        for offset in offsets {
+            let document = documents[offset]
+            
+            moc.delete(document)
+        }
+        
+        if self.moc.hasChanges {
+            try? self.moc.save()
+        }
     }
 }
 
@@ -43,8 +71,7 @@ struct VehicleView_Previews: PreviewProvider {
         sampleVehicle.model = "Alfred"
         
         return NavigationView {
-            VehicleView(vehicle: sampleVehicle)
-//            VehicleView()
+            VehicleView(vehicleName: sampleVehicle.wrappedName)
         }
         
     }
