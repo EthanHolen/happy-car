@@ -11,48 +11,53 @@ import CoreData
 struct VehicleView: View {
     
     @Environment(\.managedObjectContext) var moc
-    
-    @FetchRequest(entity: Document.entity(), sortDescriptors: []) var documents:
-        FetchedResults<Document>
-    
+
     var vehicleName: String
+    var documentsRequest: FetchRequest<Document>
+    var documents: FetchedResults<Document>{documentsRequest.wrappedValue}
     
+    
+    @State private var showingAddDocumentScreen = false
+    
+    
+    init(predicate: String) {
+        self.vehicleName = predicate
+        self.documentsRequest = FetchRequest(entity: Document.entity(), sortDescriptors: [] , predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.name), predicate))
+    }
+
     var body: some View {
         
         VStack{
-//            Text(vehicle.wrappedMake)
-//            Text(vehicle.wrappedModel)
             List{
-                ForEach(documents, id: \.self){ doc in
-                    if doc.vehicle?.wrappedName == vehicleName{
-                        NavigationLink(destination: Text(doc.wrappedNote)){
-                            Text(doc.wrappedType)
-                        }
-                    }
-                    
+                ForEach(documents, id: \.self){ document in
+                    NavigationLink(
+                        destination: Text(document.vehicle?.wrappedName ?? "Unknown"),
+                        label: {
+                            Text(document.wrappedType)
+                        })
                 }
                 .onDelete(perform: deleteDocuments)
+
             }
         }
         .navigationBarTitle(vehicleName)
         .navigationBarItems(trailing: Button(action: {
-            //  addDocumentView here
+            self.showingAddDocumentScreen.toggle()
         }, label: {
             Text("New Document")
         }))
-        
-
-        
-
+        .sheet(isPresented: $showingAddDocumentScreen, content: {
+            AddDocumentView(vehicleName: vehicleName).environment(\.managedObjectContext, self.moc)
+        })
     }
     
     func deleteDocuments(at offsets: IndexSet) {
         for offset in offsets {
             let document = documents[offset]
-            
+
             moc.delete(document)
         }
-        
+
         if self.moc.hasChanges {
             try? self.moc.save()
         }
@@ -66,12 +71,12 @@ struct VehicleView_Previews: PreviewProvider {
     static var previews: some View {
         
         let sampleVehicle = Vehicle(context: moc)
-        sampleVehicle.name = "Batmobile"
-        sampleVehicle.make = "BatCave"
-        sampleVehicle.model = "Alfred"
+        sampleVehicle.name = "Sample Car"
+        sampleVehicle.make = "Sample Make"
+        sampleVehicle.model = "Sample Model"
         
         return NavigationView {
-            VehicleView(vehicleName: sampleVehicle.wrappedName)
+            VehicleView(predicate: sampleVehicle.wrappedName)
         }
         
     }

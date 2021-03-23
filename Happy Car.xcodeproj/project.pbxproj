@@ -15,6 +15,7 @@
 		DA0FE3EF25F58ED000748FCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */; };
 		DA0FE3F225F58ED000748FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */; };
 		DA1CEB562606E3A800BA6E47 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */; };
+		DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F926B26084C630028A2DE /* AddDocumentView.swift */; };
 		DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */; };
 		DAAED33125FD3B140059B0BF /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAED32D25FD3B140059B0BF /* Document+CoreDataClass.swift */; };
 		DAAED33225FD3B140059B0BF /* Document+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAED32E25FD3B140059B0BF /* Document+CoreDataProperties.swift */; };
@@ -33,6 +34,7 @@
 		DA0FE3F125F58ED000748FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0FE3F325F58ED000748FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
+		DA2F926B26084C630028A2DE /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
 		DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		DAAED32D25FD3B140059B0BF /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		DAAED32E25FD3B140059B0BF /* Document+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
@@ -99,6 +101,7 @@
 				DA0FE3E625F58ECF00748FCE /* HomeView.swift */,
 				DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */,
 				DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */,
+				DA2F926B26084C630028A2DE /* AddDocumentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */,
 				DAAED33225FD3B140059B0BF /* Document+CoreDataProperties.swift in Sources */,
 				DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */,
 				DAAED33325FD3B140059B0BF /* Vehicle+CoreDataClass.swift in Sources */,

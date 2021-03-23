@@ -20,7 +20,7 @@ struct HomeView: View {
             VStack{
                 List {
                     ForEach(vehicles, id:\.self){ vehicle in
-                        NavigationLink(destination: VehicleView(vehicleName:  vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
+                        NavigationLink(destination: VehicleView(predicate: vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
                             Text(vehicle.wrappedName)
                         }
                     }
