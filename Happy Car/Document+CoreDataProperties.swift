@@ -2,7 +2,7 @@
 //  Document+CoreDataProperties.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 3/13/21.
+//  Created by Ethan Holen on 3/27/21.
 //
 //
 
@@ -28,9 +28,6 @@ extension Document {
     public var wrappedNote: String {
         note ?? "Empty Note"
     }
-    
-    
-    
 
 }
 

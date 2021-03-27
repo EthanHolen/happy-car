@@ -10,7 +10,7 @@
         <attribute name="make" optional="YES" attributeType="String"/>
         <attribute name="model" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="document" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Document" inverseName="vehicle" inverseEntity="Document"/>
+        <relationship name="document" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Document" inverseName="vehicle" inverseEntity="Document"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>
