@@ -31,7 +31,7 @@ struct VehicleView: View {
             List{
                 ForEach(documents, id: \.self){ document in
                     NavigationLink(
-                        destination: Text(document.vehicle?.wrappedName ?? "Unknown"),
+                        destination: DocumentView(document: document),
                         label: {
                             Text(document.wrappedType)
                         })
