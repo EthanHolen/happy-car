@@ -18,7 +18,9 @@ struct DocumentView: View {
         NavigationView {
             
             VStack{
-                Text(document.expiration ?? Date(), style: .date)
+                Text("Expiration: \(document.expiration ?? Date(), style: .date)")
+                Text("Renewal: \(DateLogic().timeBetween(Date(), and: document.expiration ?? Date()))")
+
                 Text(document.wrappedNote)
             }
             
