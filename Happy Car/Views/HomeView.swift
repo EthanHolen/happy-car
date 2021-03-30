@@ -67,11 +67,13 @@ struct HomeView: View {
         
         let maggieReg = Document(context: self.moc)
         maggieReg.type = "Registration"
+        maggieReg.expiration = Date.init(timeIntervalSinceNow: TimeInterval(86400))
         maggieReg.note = "reg note"
         maggieReg.vehicle = maggie
         
         let maggieIns = Document(context: self.moc)
         maggieIns.type = "Insurance"
+        maggieIns.expiration = Date.init(timeIntervalSinceNow: TimeInterval(31536000))
         maggieIns.note = "ins note"
         maggieIns.vehicle = maggie
         
@@ -83,11 +85,13 @@ struct HomeView: View {
         
         let oliverReg = Document(context: self.moc)
         oliverReg.type = "Registration"
+        oliverReg.expiration = Date.init(timeIntervalSinceNow: TimeInterval(5443200))
         oliverReg.note = "reg note"
         oliverReg.vehicle = oliver
         
         let oliverIns = Document(context: self.moc)
         oliverIns.type = "Insurance"
+        oliverIns.expiration = Date.init(timeIntervalSinceNow: TimeInterval(63072000))
         oliverIns.note = "ins note"
         oliverIns.vehicle = oliver
         

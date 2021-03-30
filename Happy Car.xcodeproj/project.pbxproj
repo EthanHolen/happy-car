@@ -14,6 +14,7 @@
 		DA0FE3EC25F58ED000748FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EB25F58ED000748FCE /* Assets.xcassets */; };
 		DA0FE3EF25F58ED000748FCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */; };
 		DA0FE3F225F58ED000748FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */; };
+		DA1A16BD2611545B00F9C99B /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A16BC2611545B00F9C99B /* DateLogic.swift */; };
 		DA1CEB562606E3A800BA6E47 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */; };
 		DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F926B26084C630028A2DE /* AddDocumentView.swift */; };
 		DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */; };
@@ -34,6 +35,7 @@
 		DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA0FE3F125F58ED000748FCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0FE3F325F58ED000748FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA1A16BC2611545B00F9C99B /* DateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
 		DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 		DA2F926B26084C630028A2DE /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
 		DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				DABE3CC7260F9B9D000649B3 /* Subclasses */,
 				DA1CEB4F2606D20B00BA6E47 /* Views */,
+				DA1A16BB2611533500F9C99B /* Logic */,
 				DA0FE3EB25F58ED000748FCE /* Assets.xcassets */,
 				DA0FE3F025F58ED000748FCE /* LaunchScreen.storyboard */,
 				DA0FE3F325F58ED000748FCE /* Info.plist */,
@@ -92,6 +95,14 @@
 				DA0FE3EE25F58ED000748FCE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DA1A16BB2611533500F9C99B /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A16BC2611545B00F9C99B /* DateLogic.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		DA1CEB4F2606D20B00BA6E47 /* Views */ = {
@@ -198,6 +209,7 @@
 			files = (
 				DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */,
 				DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */,
+				DA1A16BD2611545B00F9C99B /* DateLogic.swift in Sources */,
 				DABE3CCC260F9BE4000649B3 /* Document+CoreDataClass.swift in Sources */,
 				DA0FE3E325F58ECF00748FCE /* AppDelegate.swift in Sources */,
 				DA0FE3EA25F58ECF00748FCE /* Happy_Car.xcdatamodeld in Sources */,
