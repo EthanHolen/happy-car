@@ -25,6 +25,10 @@ extension Document {
         type ?? "Unknown Type"
     }
     
+    public var wrappedExpiration: Date {
+        expiration ?? Date()
+    }
+    
     public var wrappedNote: String {
         note ?? "Empty Note"
     }
