@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct VehicleRowView: View {
+struct VehicleCellView: View {
     var vehicle: Vehicle
     
     var body: some View {
@@ -41,6 +41,6 @@ struct VehicleRowView_Previews: PreviewProvider {
         sampleVehicle.model = "Sample Model"
         
         
-        return VehicleRowView(vehicle: sampleVehicle)
+        return VehicleCellView(vehicle: sampleVehicle)
     }
 }

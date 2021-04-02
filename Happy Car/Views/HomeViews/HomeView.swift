@@ -23,7 +23,7 @@ struct HomeView: View {
                         
                         NavigationLink(destination: VehicleView(predicate: vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
                             
-                            VehicleRowView(vehicle: vehicle)
+                            VehicleCellView(vehicle: vehicle)
                                 
                         }
                         
@@ -38,7 +38,11 @@ struct HomeView: View {
                 }
             }
             .navigationBarTitle("Happy Car")
-            .navigationBarItems(leading: EditButton(), trailing: Button(action: {
+            .navigationBarItems(leading: NavigationLink(
+                                    destination: SettingsView(),
+                                    label: {
+                                        Image(systemName: "gear")
+                                    }), trailing: Button(action: {
                 self.showingAddVehicleScreen.toggle()
             }, label: {
                 Text("New Vehicle")
@@ -46,7 +50,7 @@ struct HomeView: View {
             .sheet(isPresented: $showingAddVehicleScreen
                    , content: {
                     AddVehicleView().environment(\.managedObjectContext, self.moc)
-            })
+                   })
             
             
         }
