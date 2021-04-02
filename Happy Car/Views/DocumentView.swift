@@ -12,25 +12,28 @@ struct DocumentView: View {
     
     var document: Document
     
+    private let dl = DateLogic()
+    
     var body: some View {
         
-        
-        NavigationView {
+        let colors: [Int: Color] = [-1: .red, 0: .yellow, 1: .green, 2: .green]
+        let docScore = dl.documentScore(expiration: document.wrappedExpiration)
+
+
+        VStack{
+                Text(dl.generateEmoji(score: docScore))
+                    .font(.largeTitle)
             
-            VStack{
-                Text(DateLogic().generateEmoji(score: DateLogic().documentScore(expiration: document.wrappedExpiration)))
                 Text("Expiration: \(document.wrappedExpiration, style: .date)")
                 Text("Renewal: \(DateLogic().timeBetween(Date(), and: document.wrappedExpiration))")
+                    .foregroundColor(colors[docScore, default: .black])
 
                 Text(document.wrappedNote)
+
             }
+            .navigationTitle(document.wrappedType)
             
-            .navigationBarTitle(document.wrappedType)
-        }
-        
-        
-        
-        
+
     }
 }
 

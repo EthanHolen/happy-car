@@ -19,6 +19,7 @@
 		DA1CEB562606E3A800BA6E47 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */; };
 		DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F926B26084C630028A2DE /* AddDocumentView.swift */; };
 		DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */; };
+		DAAAF387261666F50071843A /* VehicleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAF386261666F50071843A /* VehicleRowView.swift */; };
 		DABE3CCC260F9BE4000649B3 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CC8260F9BE4000649B3 /* Document+CoreDataClass.swift */; };
 		DABE3CCD260F9BE4000649B3 /* Document+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CC9260F9BE4000649B3 /* Document+CoreDataProperties.swift */; };
 		DABE3CCE260F9BE4000649B3 /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CCA260F9BE4000649B3 /* Vehicle+CoreDataClass.swift */; };
@@ -41,6 +42,7 @@
 		DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 		DA2F926B26084C630028A2DE /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
 		DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
+		DAAAF386261666F50071843A /* VehicleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleRowView.swift; sourceTree = "<group>"; };
 		DABE3CC8260F9BE4000649B3 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Document+CoreDataClass.swift"; path = "Happy Car/Document+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		DABE3CC9260F9BE4000649B3 /* Document+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Document+CoreDataProperties.swift"; path = "Happy Car/Document+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		DABE3CCA260F9BE4000649B3 /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Vehicle+CoreDataClass.swift"; path = "Happy Car/Vehicle+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0FE3E625F58ECF00748FCE /* HomeView.swift */,
+				DAAAF386261666F50071843A /* VehicleRowView.swift */,
 				DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */,
 				DABE3CD3260F9F3D000649B3 /* DocumentView.swift */,
 				DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */,
@@ -221,6 +224,7 @@
 				DABE3CCF260F9BE4000649B3 /* Vehicle+CoreDataProperties.swift in Sources */,
 				DABE3CD4260F9F3D000649B3 /* DocumentView.swift in Sources */,
 				DABE3CCE260F9BE4000649B3 /* Vehicle+CoreDataClass.swift in Sources */,
+				DAAAF387261666F50071843A /* VehicleRowView.swift in Sources */,
 				DABE3CCD260F9BE4000649B3 /* Document+CoreDataProperties.swift in Sources */,
 				DA1CEB562606E3A800BA6E47 /* AddVehicleView.swift in Sources */,
 				DA0FE3E725F58ECF00748FCE /* HomeView.swift in Sources */,
