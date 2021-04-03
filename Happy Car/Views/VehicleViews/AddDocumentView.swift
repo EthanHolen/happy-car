@@ -43,7 +43,7 @@ struct AddDocumentView: View {
                 }
                 
             }
-            .navigationBarTitle("New Vehicle")
+            .navigationBarTitle("New Document")
             .navigationBarItems(trailing: Button("Save"){
                 let
                     newDocument = Document(context: self.moc)

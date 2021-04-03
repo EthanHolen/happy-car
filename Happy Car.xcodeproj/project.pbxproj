@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA0BA24B26182E6B005941A8 /* DocumentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA24A26182E6B005941A8 /* DocumentCellView.swift */; };
 		DA0FE3E325F58ECF00748FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */; };
 		DA0FE3E525F58ECF00748FCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */; };
 		DA0FE3E725F58ECF00748FCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0FE3E625F58ECF00748FCE /* HomeView.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA0BA24A26182E6B005941A8 /* DocumentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCellView.swift; sourceTree = "<group>"; };
 		DA0FE3DF25F58ECF00748FCE /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0FE3E225F58ECF00748FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */,
 				DABE3CD3260F9F3D000649B3 /* DocumentView.swift */,
 				DA2F926B26084C630028A2DE /* AddDocumentView.swift */,
+				DA0BA24A26182E6B005941A8 /* DocumentCellView.swift */,
 			);
 			path = VehicleViews;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */,
+				DA0BA24B26182E6B005941A8 /* DocumentCellView.swift in Sources */,
 				DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */,
 				DAE9362426179F1600D2F590 /* SettingCellView.swift in Sources */,
 				DA1A16BD2611545B00F9C99B /* DateLogic.swift in Sources */,
