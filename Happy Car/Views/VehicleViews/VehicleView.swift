@@ -33,7 +33,7 @@ struct VehicleView: View {
                     NavigationLink(
                         destination: DocumentView(document: document),
                         label: {
-                            Text(document.wrappedType)
+                            DocumentCellView(document: document)
                         })
                 }
                 .onDelete(perform: deleteDocuments)
@@ -44,7 +44,8 @@ struct VehicleView: View {
         .navigationBarItems(trailing: Button(action: {
             self.showingAddDocumentScreen.toggle()
         }, label: {
-            Text("New Document")
+            Image(systemName: "doc.fill.badge.plus")
+                .font(.title2)
         }))
         .sheet(isPresented: $showingAddDocumentScreen, content: {
             AddDocumentView(vehicleName: vehicleName).environment(\.managedObjectContext, self.moc)

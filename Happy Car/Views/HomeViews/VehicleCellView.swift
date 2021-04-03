@@ -14,18 +14,44 @@ struct VehicleCellView: View {
     var body: some View {
         
         HStack{
-            Text("😁")
+            
             VStack(alignment: .leading){
                 Text(vehicle.wrappedName)
-                    .font(.headline)
+                    .font(.largeTitle)
                 Text(vehicle.wrappedMake + " " + vehicle.wrappedModel)
                     .font(.subheadline)
                 
             }
+            Spacer()
+            Text(vehicleEmoji(vehicle: vehicle))
+                .font(.largeTitle)
+            
             
         }
         
     }
+    
+    func vehicleEmoji(vehicle: Vehicle) -> String {
+        
+        let docCount = vehicle.documentArray.count
+        
+        if docCount == 0 {
+            return "😕"
+        }
+        
+        let dl = DateLogic()
+        
+        var vehicleScore = 0
+        
+        for document in vehicle.documentArray{
+            vehicleScore += dl.documentScore(expiration: document.wrappedExpiration)
+        }
+        
+    
+        return dl.generateEmoji(score: (vehicleScore / docCount))
+    }
+    
+    
 }
 
 struct VehicleRowView_Previews: PreviewProvider {

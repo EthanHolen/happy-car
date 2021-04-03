@@ -42,10 +42,12 @@ struct HomeView: View {
                                     destination: SettingsView(),
                                     label: {
                                         Image(systemName: "gear")
+                                            .font(.title2)
                                     }), trailing: Button(action: {
                 self.showingAddVehicleScreen.toggle()
             }, label: {
-                Text("New Vehicle")
+                Image(systemName: "car.2.fill")
+                    .font(.title2)
             }))
             .sheet(isPresented: $showingAddVehicleScreen
                    , content: {

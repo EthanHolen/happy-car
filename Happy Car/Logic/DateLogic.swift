@@ -13,13 +13,16 @@ class DateLogic {
     
     func timeBetween(_ now: Date, and expiration: Date) -> String {
         
-        let timeDiff = Calendar.current.dateComponents(
+        var timeDiff = Calendar.current.dateComponents(
             [
                 Calendar.Component.year,
                 Calendar.Component.month,
                 Calendar.Component.day,
             ],
             from: now, to: expiration)
+        
+        // makes due tomorrow = due in one day
+        timeDiff.day = Calendar.current.numberOfDaysBetween(now, and: expiration)
         
         return formatTimeBetweenString(timeDiff: timeDiff)
     }
@@ -30,26 +33,26 @@ class DateLogic {
         if (timeDiff.year ?? 0) > 0 {
             
             if timeDiff.year! == 1 {
-                return "\(timeDiff.year!) year"
+                return "Expires in \(timeDiff.year!) year"
             }
             
-            return "\(timeDiff.year!) years"
+            return "Expires in \(timeDiff.year!) years"
             
         }else if timeDiff.month ?? 0 > 0 {
             
             if timeDiff.month! == 1 {
-                return "\(timeDiff.month!) month"
+                return "Expires in \(timeDiff.month!) month"
             }
             
-            return "\(timeDiff.month!) months"
+            return "Expires in \(timeDiff.month!) months"
             
-        }else if (timeDiff.day ?? 0) > 0 {
+        }else if (timeDiff.day ?? 0) >= 0 {
             
             if timeDiff.day! == 1 {
-                return "\(timeDiff.day!) day"
+                return "Expires in \(timeDiff.day!) day"
             }
             
-            return "\(timeDiff.day!) days"
+            return "Expires in \(timeDiff.day!) days"
         }
         
         return "Expired"
