@@ -10,7 +10,7 @@ import CoreData
 
 struct DocumentCellView: View {
     
-    let document: Document
+    @ObservedObject var document: Document
     
     var body: some View {
         
