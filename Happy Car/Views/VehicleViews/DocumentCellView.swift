@@ -31,7 +31,7 @@ struct DocumentCellView: View {
                     
             }
             Spacer()
-            Text(dl.generateEmoji(score: dl.documentScore(expiration: document.wrappedExpiration)))
+            Text(dl.generateEmoji(score: document.score()))
                 .font(.largeTitle)
             
         }

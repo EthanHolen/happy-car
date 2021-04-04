@@ -78,13 +78,13 @@ struct HomeView: View {
         
         let maggieReg = Document(context: self.moc)
         maggieReg.type = "Registration"
-        maggieReg.expiration = Date.init(timeIntervalSinceNow: TimeInterval(86400))
+        maggieReg.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
         maggieReg.note = "reg note"
         maggieReg.vehicle = maggie
         
         let maggieIns = Document(context: self.moc)
         maggieIns.type = "Insurance"
-        maggieIns.expiration = Date.init(timeIntervalSinceNow: TimeInterval(31536000))
+        maggieIns.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
         maggieIns.note = "ins note"
         maggieIns.vehicle = maggie
         
@@ -96,13 +96,13 @@ struct HomeView: View {
         
         let oliverReg = Document(context: self.moc)
         oliverReg.type = "Registration"
-        oliverReg.expiration = Date.init(timeIntervalSinceNow: TimeInterval(5443200))
+        oliverReg.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
         oliverReg.note = "reg note"
         oliverReg.vehicle = oliver
         
         let oliverIns = Document(context: self.moc)
         oliverIns.type = "Insurance"
-        oliverIns.expiration = Date.init(timeIntervalSinceNow: TimeInterval(63072000))
+        oliverIns.expiration = Date.init(timeIntervalSinceNow: 518400) // 6 Days
         oliverIns.note = "ins note"
         oliverIns.vehicle = oliver
         
@@ -114,11 +114,13 @@ struct HomeView: View {
         
         let quincyReg = Document(context: self.moc)
         quincyReg.type = "Registration"
+        quincyReg.expiration = Date.init(timeIntervalSinceNow: 4233600) // 49 days
         quincyReg.note = "reg note"
         quincyReg.vehicle = quincy
         
         let quincyIns = Document(context: self.moc)
         quincyIns.type = "Insurance"
+        quincyIns.expiration = Date.init(timeIntervalSinceNow: 31536000) // 1 year
         quincyIns.note = "ins note"
         quincyIns.vehicle = quincy
         

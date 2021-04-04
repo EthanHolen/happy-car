@@ -17,7 +17,7 @@ struct DocumentView: View {
     var body: some View {
         
         let colors: [Int: Color] = [-1: .red, 0: .yellow, 1: .green, 2: .green]
-        let docScore = dl.documentScore(expiration: document.wrappedExpiration)
+        let docScore = document.score()
 
 
         VStack{
