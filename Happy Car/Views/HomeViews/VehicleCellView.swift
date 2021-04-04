@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct VehicleCellView: View {
-    var vehicle: Vehicle
+    @ObservedObject var vehicle: Vehicle
     
     var body: some View {
         
