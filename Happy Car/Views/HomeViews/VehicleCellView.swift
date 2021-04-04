@@ -13,6 +13,8 @@ struct VehicleCellView: View {
     
     var body: some View {
         
+        let dl = DateLogic()
+        
         HStack{
             
             VStack(alignment: .leading){
@@ -23,32 +25,12 @@ struct VehicleCellView: View {
                 
             }
             Spacer()
-            Text(vehicleEmoji(vehicle: vehicle))
+            Text(dl.generateEmoji(score: vehicle.score()))
                 .font(.largeTitle)
             
             
         }
         
-    }
-    
-    func vehicleEmoji(vehicle: Vehicle) -> String {
-        
-        let docCount = vehicle.documentArray.count
-        
-        if docCount == 0 {
-            return "😕"
-        }
-        
-        let dl = DateLogic()
-        
-        var vehicleScore = 0
-        
-        for document in vehicle.documentArray{
-            vehicleScore += dl.documentScore(expiration: document.wrappedExpiration)
-        }
-        
-    
-        return dl.generateEmoji(score: (vehicleScore / docCount))
     }
     
     

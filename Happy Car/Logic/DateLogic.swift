@@ -58,35 +58,11 @@ class DateLogic {
         return "Expired"
     }
     
-    
-    func documentScore(expiration: Date) -> Int{
-        
-        var score = 0
-        
-        let daysUntilExpiration = Calendar.current.numberOfDaysBetween(Date(), and: expiration)
-        
-        if daysUntilExpiration > 14 {
-            score = 2
-        }
-        
-        if daysUntilExpiration > 7 && daysUntilExpiration <= 14 {
-            score = 1
-        }
-        
-        if daysUntilExpiration > 0 && daysUntilExpiration <= 7 {
-            score = 0
-        }
-        
-        if daysUntilExpiration < 0 {
-            score = -1
-        }
-        
-        return score
-    }
+
     
     func generateEmoji(score: Int) -> String{
         
-        var emoji = "😕"
+        var emoji = "🤔"
         
         switch score {
         
@@ -97,13 +73,13 @@ class DateLogic {
             emoji = "🙂"
             
         case 0:
-            emoji = "😑"
+            emoji = "😬"
             
         case -1:
             emoji = "😢"
             
         default:
-            emoji = "😕"
+            emoji = "🤔"
         }
         
         return emoji
