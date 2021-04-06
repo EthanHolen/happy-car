@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 class DateLogic {
     
     
@@ -57,35 +58,6 @@ class DateLogic {
         
         return "Expired"
     }
-    
-
-    
-    func generateEmoji(score: Int) -> String{
-        
-        var emoji = "🤔"
-        
-        switch score {
-        
-        case 2:
-            emoji = "😁"
-            
-        case 1:
-            emoji = "🙂"
-            
-        case 0:
-            emoji = "😬"
-            
-        case -1:
-            emoji = "😢"
-            
-        default:
-            emoji = "🤔"
-        }
-        
-        return emoji
-    }
-    
-    
 }
 
 

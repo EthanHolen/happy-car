@@ -12,11 +12,7 @@ struct VehicleCellView: View {
     @ObservedObject var vehicle: Vehicle
     
     var body: some View {
-        
-        let dl = DateLogic()
-        
         HStack{
-            
             VStack(alignment: .leading){
                 Text(vehicle.wrappedName)
                     .font(.largeTitle)
@@ -25,7 +21,7 @@ struct VehicleCellView: View {
                 
             }
             Spacer()
-            Text(dl.generateEmoji(score: vehicle.score()))
+            Text(vehicle.emoji())
                 .font(.largeTitle)
             
             

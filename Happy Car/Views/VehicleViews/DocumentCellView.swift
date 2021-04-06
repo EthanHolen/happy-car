@@ -16,11 +16,7 @@ struct DocumentCellView: View {
         
         let dl = DateLogic()
         
-        
-        
         HStack{
-            
-            
             VStack(alignment: .leading) {
                 
                 
@@ -28,10 +24,10 @@ struct DocumentCellView: View {
                     .font(.largeTitle)
                 Text(dl.timeBetween(Date(), and: document.wrappedExpiration))
                     .font(.subheadline)
-                    
+                
             }
             Spacer()
-            Text(dl.generateEmoji(score: document.score()))
+            Text(document.emoji())
                 .font(.largeTitle)
             
         }
