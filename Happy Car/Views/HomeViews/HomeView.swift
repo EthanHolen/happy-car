@@ -24,13 +24,14 @@ struct HomeView: View {
                         NavigationLink(destination: VehicleView(predicate: vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
                             
                             VehicleCellView(vehicle: vehicle)
-                                
+                            
                         }
                         
                     }
                     .onDelete(perform: deleteVehicles)
                     
                 }
+                .listStyle(InsetGroupedListStyle())
                 Button("FILL"){
                     
                     generateData()
@@ -44,11 +45,11 @@ struct HomeView: View {
                                         Image(systemName: "gear")
                                             .font(.title2)
                                     }), trailing: Button(action: {
-                self.showingAddVehicleScreen.toggle()
-            }, label: {
-                Image(systemName: "car.2.fill")
-                    .font(.title2)
-            }))
+                                        self.showingAddVehicleScreen.toggle()
+                                    }, label: {
+                                        Image(systemName: "car.2.fill")
+                                            .font(.title2)
+                                    }))
             .sheet(isPresented: $showingAddVehicleScreen
                    , content: {
                     AddVehicleView().environment(\.managedObjectContext, self.moc)
@@ -56,6 +57,7 @@ struct HomeView: View {
             
             
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func deleteVehicles(at offsets: IndexSet) {

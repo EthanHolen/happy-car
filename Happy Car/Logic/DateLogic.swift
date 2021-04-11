@@ -47,14 +47,17 @@ class DateLogic {
             
             return "Expires in \(timeDiff.month!) months"
             
-        }else if (timeDiff.day ?? 0) >= 0 {
+        }else if (timeDiff.day ?? 0) > 0 {
             
             if timeDiff.day! == 1 {
                 return "Expires in \(timeDiff.day!) day"
             }
             
             return "Expires in \(timeDiff.day!) days"
+        }else if (timeDiff.day ?? 0) == 0 {
+            return "Expires today"
         }
+        
         
         return "Expired"
     }

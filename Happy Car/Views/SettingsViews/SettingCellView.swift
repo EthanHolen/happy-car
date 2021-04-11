@@ -17,17 +17,16 @@ struct SettingCellView: View {
         HStack{
             Image(systemName: imgName)
                 .font(.headline)
-                .foregroundColor(clr)
+                .foregroundColor(.white)
+                .padding(3)
+                .background(clr)
+                .cornerRadius(4)
 
             Text(title)
                 .font(.headline)
                 .padding(.leading, 10)
             
             Spacer()
-            
-//            Image(systemName: "chevron.right")
-//                .font(.headline)
-//                .foregroundColor(.gray)
         }
     }
 }
