@@ -22,13 +22,17 @@ struct DocumentCellView: View {
                 
                 Text(document.wrappedType)
                     .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.vertical, 10)
                 Text(dl.timeBetween(Date(), and: document.wrappedExpiration))
-                    .font(.subheadline)
+                    .font(.headline)
+                    .padding(.bottom, 10)
+                    .foregroundColor(document.color())
                 
             }
             Spacer()
             Text(document.emoji())
-                .font(.largeTitle)
+                .font(.system(size: 45))
             
         }
         

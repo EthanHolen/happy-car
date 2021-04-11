@@ -39,6 +39,7 @@ struct VehicleView: View {
                 .onDelete(perform: deleteDocuments)
 
             }
+            .listStyle(InsetGroupedListStyle())
         }
         .navigationBarTitle(vehicleName)
         .navigationBarItems(trailing: Button(action: {

@@ -78,10 +78,10 @@ public class Document: NSManagedObject {
             color = Color(.systemGreen)
             
         case 1:
-            color = Color(.systemOrange)
+            color = Color(.systemGreen)
             
         case 0:
-            color = Color(.systemYellow)
+            color = Color(.systemOrange)
             
         case -1:
             color = Color(.systemRed)

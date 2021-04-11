@@ -16,14 +16,16 @@ struct VehicleCellView: View {
             VStack(alignment: .leading){
                 Text(vehicle.wrappedName)
                     .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .padding(.vertical, 10)
                 Text(vehicle.wrappedMake + " " + vehicle.wrappedModel)
-                    .font(.subheadline)
+                    .font(.headline)
+                    .padding(.bottom, 10)
                 
             }
             Spacer()
             Text(vehicle.emoji())
-                .font(.largeTitle)
-            
+                .font(.system(size: 45))
             
         }
         
