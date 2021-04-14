@@ -12,6 +12,7 @@ struct VehicleView: View {
     
     @Environment(\.managedObjectContext) var moc
 
+    var vehicle: Vehicle
     var vehicleName: String
     var documentsRequest: FetchRequest<Document>
     var documents: FetchedResults<Document>{documentsRequest.wrappedValue}
@@ -20,26 +21,62 @@ struct VehicleView: View {
     @State private var showingAddDocumentScreen = false
     
     
-    init(predicate: String) {
-        self.vehicleName = predicate
-        self.documentsRequest = FetchRequest(entity: Document.entity(), sortDescriptors: [] , predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.name), predicate))
+    init(vehicle: Vehicle) {
+        self.vehicle = vehicle
+        self.vehicleName = vehicle.wrappedName
+        self.documentsRequest = FetchRequest(entity: Document.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Document.type, ascending: true)] , predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.name), vehicle.wrappedName
+        ))
     }
 
     var body: some View {
-        
-        VStack{
-            List{
-                ForEach(documents, id: \.self){ document in
-                    NavigationLink(
-                        destination: DocumentView(document: document),
-                        label: {
-                            DocumentCellView(document: document)
-                        })
+        VStack {
+            
+            HStack {
+                VStack (alignment: .leading){
+                    Text(vehicle.wrappedMake)
+                        .font(.title2)
+                    
+                    Text(vehicle.wrappedModel)
+                        .font(.title)
+                        .bold()
                 }
-                .onDelete(perform: deleteDocuments)
-
+                
+                
+                
+                
+                Spacer()
+                
+                Text(vehicle.emoji())
+                    .font(.system(size: 45))
             }
-            .listStyle(InsetGroupedListStyle())
+            .padding(.horizontal)
+//            .background(Color(.blue))
+            
+            
+            
+            
+            if !(documents.isEmpty) {
+                List{
+                    ForEach(documents, id: \.self){ document in
+                        NavigationLink(
+                            destination: DocumentView(document: document),
+                            label: {
+                                DocumentCellView(document: document)
+                            })
+                    }
+                    .onDelete(perform: deleteDocuments)
+
+                }
+                .listStyle(InsetGroupedListStyle())
+            } else {
+                Button(action: {
+                    self.showingAddDocumentScreen.toggle()
+                }, label: {
+                    EmptyListButton(buttonText: "New Document")
+                })
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding()
+            }
         }
         .navigationBarTitle(vehicleName)
         .navigationBarItems(trailing: Button(action: {
@@ -67,19 +104,18 @@ struct VehicleView: View {
 }
 
 struct VehicleView_Previews: PreviewProvider {
-    
-    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 
     static var previews: some View {
+        
+        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleVehicle = Vehicle(context: moc)
         sampleVehicle.name = "Sample Car"
         sampleVehicle.make = "Sample Make"
         sampleVehicle.model = "Sample Model"
         
-        return NavigationView {
-            VehicleView(predicate: sampleVehicle.wrappedName)
-        }
+        return VehicleView(vehicle: sampleVehicle)
+        
         
     }
 }

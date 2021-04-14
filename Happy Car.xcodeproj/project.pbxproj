@@ -19,6 +19,7 @@
 		DA1A16BD2611545B00F9C99B /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A16BC2611545B00F9C99B /* DateLogic.swift */; };
 		DA1CEB562606E3A800BA6E47 /* AddVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */; };
 		DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F926B26084C630028A2DE /* AddDocumentView.swift */; };
+		DA50D93C262765B30047AD55 /* EmptyListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D93B262765B30047AD55 /* EmptyListButton.swift */; };
 		DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */; };
 		DAAAF387261666F50071843A /* VehicleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAAF386261666F50071843A /* VehicleCellView.swift */; };
 		DABE3CCC260F9BE4000649B3 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CC8260F9BE4000649B3 /* Document+CoreDataClass.swift */; };
@@ -26,6 +27,7 @@
 		DABE3CCE260F9BE4000649B3 /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CCA260F9BE4000649B3 /* Vehicle+CoreDataClass.swift */; };
 		DABE3CCF260F9BE4000649B3 /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CCB260F9BE4000649B3 /* Vehicle+CoreDataProperties.swift */; };
 		DABE3CD4260F9F3D000649B3 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABE3CD3260F9F3D000649B3 /* DocumentView.swift */; };
+		DAC11DB42626460B00EA610D /* EditDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC11DB32626460B00EA610D /* EditDocumentView.swift */; };
 		DAE9361C2617995100D2F590 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9361B2617995100D2F590 /* SettingsView.swift */; };
 		DAE9362426179F1600D2F590 /* SettingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE9362326179F1600D2F590 /* SettingCellView.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,7 @@
 		DA1A16BC2611545B00F9C99B /* DateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
 		DA1CEB552606E3A800BA6E47 /* AddVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVehicleView.swift; sourceTree = "<group>"; };
 		DA2F926B26084C630028A2DE /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
+		DA50D93B262765B30047AD55 /* EmptyListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListButton.swift; sourceTree = "<group>"; };
 		DA92ABEC25FF23E70042F6B4 /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		DAAAF386261666F50071843A /* VehicleCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCellView.swift; sourceTree = "<group>"; };
 		DABE3CC8260F9BE4000649B3 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Document+CoreDataClass.swift"; path = "Happy Car/Document+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -52,6 +55,7 @@
 		DABE3CCA260F9BE4000649B3 /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Vehicle+CoreDataClass.swift"; path = "Happy Car/Vehicle+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		DABE3CCB260F9BE4000649B3 /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Vehicle+CoreDataProperties.swift"; path = "Happy Car/Vehicle+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		DABE3CD3260F9F3D000649B3 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		DAC11DB32626460B00EA610D /* EditDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDocumentView.swift; sourceTree = "<group>"; };
 		DAE9361B2617995100D2F590 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		DAE9362326179F1600D2F590 /* SettingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +126,7 @@
 				DAE9361E26179DC500D2F590 /* HomeViews */,
 				DAE9361F26179E1400D2F590 /* SettingsViews */,
 				DAE9362026179E6200D2F590 /* VehicleViews */,
+				DA50D93A2627656A0047AD55 /* UIComponents */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +138,14 @@
 				DA0FE3E425F58ECF00748FCE /* SceneDelegate.swift */,
 			);
 			path = BaseFiles;
+			sourceTree = "<group>";
+		};
+		DA50D93A2627656A0047AD55 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				DA50D93B262765B30047AD55 /* EmptyListButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		DABE3CC7260F9B9D000649B3 /* Subclasses */ = {
@@ -172,6 +185,7 @@
 				DABE3CD3260F9F3D000649B3 /* DocumentView.swift */,
 				DA2F926B26084C630028A2DE /* AddDocumentView.swift */,
 				DA0BA24A26182E6B005941A8 /* DocumentCellView.swift */,
+				DAC11DB32626460B00EA610D /* EditDocumentView.swift */,
 			);
 			path = VehicleViews;
 			sourceTree = "<group>";
@@ -246,8 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC11DB42626460B00EA610D /* EditDocumentView.swift in Sources */,
 				DA2F926C26084C630028A2DE /* AddDocumentView.swift in Sources */,
 				DA0BA24B26182E6B005941A8 /* DocumentCellView.swift in Sources */,
+				DA50D93C262765B30047AD55 /* EmptyListButton.swift in Sources */,
 				DA92ABED25FF23E70042F6B4 /* VehicleView.swift in Sources */,
 				DAE9362426179F1600D2F590 /* SettingCellView.swift in Sources */,
 				DA1A16BD2611545B00F9C99B /* DateLogic.swift in Sources */,

@@ -11,7 +11,7 @@ struct AddDocumentView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var type = ""
+    @State private var type = "ID"
     @State private var expiration = Date()
     @State private var note = ""
     
@@ -26,11 +26,23 @@ struct AddDocumentView: View {
     }
     
     var body: some View {
+        
+        let documentTypes = ["ID", "Insurance", "Registration", "Other..."]
+        
         NavigationView {
             Form {
                 Section {
-                    TextField("Document Type", text: $type)
                     
+                    Picker("Document Type", selection: $type) {
+                        ForEach(documentTypes, id: \.self){
+                            Text($0)
+                        }
+                    }
+                    if(type != "ID" && type != "Insurance" && type != "Registration"){
+
+                        TextField("Document Type", text: $type)
+                    }
+      
                 }
                 
                 Section{
@@ -39,14 +51,15 @@ struct AddDocumentView: View {
                 
                 Section {
                     TextArea("Note" , text: $note)
-                        
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding()
+                    
                 }
                 
             }
             .navigationBarTitle("New Document")
             .navigationBarItems(trailing: Button("Save"){
-                let
-                    newDocument = Document(context: self.moc)
+                let newDocument = Document(context: self.moc)
                 newDocument.type = self.type
                 newDocument.expiration = self.expiration
                 newDocument.note = self.note
