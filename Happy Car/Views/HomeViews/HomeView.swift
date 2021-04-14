@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Vehicle.entity(), sortDescriptors: []) var vehicles:
+    @FetchRequest(entity: Vehicle.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Vehicle.name, ascending: true)]) var vehicles:
         FetchedResults<Vehicle>
     
     @State private var showingAddVehicleScreen = false
@@ -18,20 +18,31 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack{
-                List {
-                    ForEach(vehicles, id:\.self){ vehicle in
-                        
-                        NavigationLink(destination: VehicleView(predicate: vehicle.wrappedName).environment(\.managedObjectContext, self.moc)) {
+                if !(vehicles.isEmpty) {
+                    List {
+                        ForEach(vehicles, id:\.self){ vehicle in
                             
-                            VehicleCellView(vehicle: vehicle)
+                            NavigationLink(destination: VehicleView(vehicle: vehicle).environment(\.managedObjectContext, self.moc)) {
+                                
+                                VehicleCellView(vehicle: vehicle)
+                                
+                            }
                             
                         }
+                        .onDelete(perform: deleteVehicles)
                         
                     }
-                    .onDelete(perform: deleteVehicles)
+                    .listStyle(InsetGroupedListStyle())
+                } else {
+                    Button(action: {
+                        self.showingAddVehicleScreen.toggle()
+                    }, label: {
+                        EmptyListButton(buttonText: "New Vehicle")
+                    })
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .padding()
                     
                 }
-                .listStyle(InsetGroupedListStyle())
                 Button("FILL"){
                     
                     generateData()

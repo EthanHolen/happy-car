@@ -13,6 +13,7 @@ struct DocumentView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     @State private var showingDeleteAlert = false
+    @State private var showingEditDocumentScreen = false
     
     let document: Document
     
@@ -46,7 +47,7 @@ struct DocumentView: View {
                 Text(document.wrappedNote)
                 
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .background(Color(.systemGray3))
             .cornerRadius(20)
@@ -65,9 +66,14 @@ struct DocumentView: View {
         }
         .navigationBarItems(trailing: Menu {
             
-            Button(action: {}) {
+
+            Button {
+                showingEditDocumentScreen = true
+            } label: { 
                 Label("Edit", systemImage: "square.and.pencil")
             }
+
+
             
             Button(action: {
                 showingDeleteAlert = true
@@ -79,6 +85,10 @@ struct DocumentView: View {
             Image(systemName: "ellipsis")
                 .font(.largeTitle)
                 .padding(2)
+        })
+        .sheet(isPresented: $showingEditDocumentScreen, content: {
+
+            EditDocumentView(document: document).environment(\.managedObjectContext, self.moc)
         })
         
         
@@ -96,12 +106,6 @@ struct DocumentView: View {
 
 struct DocumentView_Previews: PreviewProvider {
     
-    
-    
-    
-    
-    //        static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-    
     static var previews: some View {
         
         let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -109,7 +113,7 @@ struct DocumentView_Previews: PreviewProvider {
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"
         sampleDocument.expiration  = Date(timeIntervalSinceNow: 3 * (60 * 60 * 24))
-        sampleDocument.note = "This is a quick sample not which is probably as long as anyone will want to make one of these TBH \n hey\n hey\n hey"
+        sampleDocument.note = "Simple note"
         
         return DocumentView(document: sampleDocument)
         
