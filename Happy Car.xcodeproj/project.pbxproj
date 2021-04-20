@@ -28,6 +28,7 @@
 		DA80A1832628A12300897F21 /* Happy_Car.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1812628A12300897F21 /* Happy_Car.xcdatamodeld */; };
 		DA80A18E2628A12400897F21 /* Happy_CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A18D2628A12400897F21 /* Happy_CarTests.swift */; };
 		DA80A1992628A12400897F21 /* Happy_CarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1982628A12400897F21 /* Happy_CarUITests.swift */; };
+		DAD1358B262F5685007A7DB7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD1358A262F5685007A7DB7 /* CloudKit.framework */; };
 		DADF2CEB262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE7262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift */; };
 		DADF2CEC262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE8262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift */; };
 		DADF2CED262E60BB00BDFB37 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE9262E60BB00BDFB37 /* Document+CoreDataClass.swift */; };
@@ -79,6 +80,8 @@
 		DA80A1942628A12400897F21 /* Happy CarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happy CarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80A1982628A12400897F21 /* Happy_CarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarUITests.swift; sourceTree = "<group>"; };
 		DA80A19A2628A12400897F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD13585262F567F007A7DB7 /* Happy Car.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy Car.entitlements"; sourceTree = "<group>"; };
+		DAD1358A262F5685007A7DB7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DADF2CE7262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DADF2CE8262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DADF2CE9262E60BB00BDFB37 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD1358B262F5685007A7DB7 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +198,7 @@
 				DA80A18C2628A12400897F21 /* Happy CarTests */,
 				DA80A1972628A12400897F21 /* Happy CarUITests */,
 				DA80A1742628A12100897F21 /* Products */,
+				DAD13589262F5685007A7DB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +215,7 @@
 		DA80A1752628A12100897F21 /* Happy Car */ = {
 			isa = PBXGroup;
 			children = (
+				DAD13585262F567F007A7DB7 /* Happy Car.entitlements */,
 				DA80A1762628A12200897F21 /* Happy_CarApp.swift */,
 				DA410C872628D298006799B6 /* Subclasses */,
 				DA410CAA2628D78B006799B6 /* Views */,
@@ -249,6 +255,14 @@
 				DA80A19A2628A12400897F21 /* Info.plist */,
 			);
 			path = "Happy CarUITests";
+			sourceTree = "<group>";
+		};
+		DAD13589262F5685007A7DB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAD1358A262F5685007A7DB7 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Happy Car/Happy Car.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Happy Car/Preview Content\"";
 				DEVELOPMENT_TEAM = HFN7HCJ656;
@@ -579,6 +594,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Happy Car/Happy Car.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Happy Car/Preview Content\"";
 				DEVELOPMENT_TEAM = HFN7HCJ656;

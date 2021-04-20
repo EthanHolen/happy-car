@@ -11,11 +11,6 @@
         <attribute name="model" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="document" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Document" inverseName="vehicle" inverseEntity="Document"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="name"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="Document" positionX="-63" positionY="-9" width="128" height="89"/>
