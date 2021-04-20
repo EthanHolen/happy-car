@@ -42,6 +42,8 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding()
                     
+
+                    
                 }
                 Button("FILL"){
                     
@@ -68,7 +70,7 @@ struct HomeView: View {
             
             
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+//        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func deleteVehicles(at offsets: IndexSet) {
@@ -82,6 +84,8 @@ struct HomeView: View {
         if self.moc.hasChanges {
             try? self.moc.save()
         }
+        
+        
     }
     func generateData(){
         
