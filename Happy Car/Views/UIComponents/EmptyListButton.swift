@@ -21,7 +21,7 @@ struct EmptyListButton: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(Color(.systemBlue))
+        .background(Color(.systemGray2))
         .cornerRadius(20)
         .foregroundColor(.white)
         .padding()

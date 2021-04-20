@@ -2,7 +2,7 @@
 //  Document+CoreDataClass.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 3/27/21.
+//  Created by Ethan Holen on 4/19/21.
 //
 //
 
@@ -12,7 +12,6 @@ import SwiftUI
 
 @objc(Document)
 public class Document: NSManagedObject {
-    
     
     func score() -> Int{
         
@@ -92,5 +91,5 @@ public class Document: NSManagedObject {
         
         return color
     }
-
+    
 }

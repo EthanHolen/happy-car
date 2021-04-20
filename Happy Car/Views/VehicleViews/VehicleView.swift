@@ -11,7 +11,7 @@ import CoreData
 struct VehicleView: View {
     
     @Environment(\.managedObjectContext) var moc
-
+    
     var vehicle: Vehicle
     var vehicleName: String
     var documentsRequest: FetchRequest<Document>
@@ -27,7 +27,7 @@ struct VehicleView: View {
         self.documentsRequest = FetchRequest(entity: Document.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Document.type, ascending: true)] , predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.name), vehicle.wrappedName
         ))
     }
-
+    
     var body: some View {
         VStack {
             
@@ -50,7 +50,7 @@ struct VehicleView: View {
                     .font(.system(size: 45))
             }
             .padding(.horizontal)
-//            .background(Color(.blue))
+            //            .background(Color(.blue))
             
             
             
@@ -65,7 +65,7 @@ struct VehicleView: View {
                             })
                     }
                     .onDelete(perform: deleteDocuments)
-
+                    
                 }
                 .listStyle(InsetGroupedListStyle())
             } else {
@@ -93,10 +93,10 @@ struct VehicleView: View {
     func deleteDocuments(at offsets: IndexSet) {
         for offset in offsets {
             let document = documents[offset]
-
+            
             moc.delete(document)
         }
-
+        
         if self.moc.hasChanges {
             try? self.moc.save()
         }
@@ -104,18 +104,27 @@ struct VehicleView: View {
 }
 
 struct VehicleView_Previews: PreviewProvider {
-
+    
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     static var previews: some View {
-        
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleVehicle = Vehicle(context: moc)
         sampleVehicle.name = "Sample Car"
         sampleVehicle.make = "Sample Make"
         sampleVehicle.model = "Sample Model"
         
-        return VehicleView(vehicle: sampleVehicle)
+        return NavigationView {
+            VehicleView(vehicle: sampleVehicle)
+        }
+        
+        
         
         
     }
 }
+
+
+
+
+

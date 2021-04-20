@@ -78,6 +78,7 @@ struct HomeView: View {
             moc.delete(vehicle)
         }
         
+        
         if self.moc.hasChanges {
             try? self.moc.save()
         }

@@ -2,7 +2,7 @@
 //  Vehicle+CoreDataClass.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 3/27/21.
+//  Created by Ethan Holen on 4/19/21.
 //
 //
 
@@ -12,7 +12,6 @@ import SwiftUI
 
 @objc(Vehicle)
 public class Vehicle: NSManagedObject {
-    
     
     func score() -> Int {
         
@@ -92,8 +91,5 @@ public class Vehicle: NSManagedObject {
         
         return color
     }
-    
-    
-    
 
 }
