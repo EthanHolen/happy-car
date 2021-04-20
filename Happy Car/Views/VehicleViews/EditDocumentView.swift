@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct EditDocumentView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -57,9 +58,12 @@ struct EditDocumentView: View {
 }
 
 struct EditDocumentView_Previews: PreviewProvider {
+    
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     static var previews: some View {
         
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"

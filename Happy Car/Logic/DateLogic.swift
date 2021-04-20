@@ -2,7 +2,7 @@
 //  DateLogic.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 3/28/21.
+//  Created by Ethan Holen on 4/15/21.
 //
 
 import Foundation
@@ -62,5 +62,3 @@ class DateLogic {
         return "Expired"
     }
 }
-
-

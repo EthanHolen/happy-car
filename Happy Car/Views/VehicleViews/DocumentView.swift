@@ -69,7 +69,7 @@ struct DocumentView: View {
 
             Button {
                 showingEditDocumentScreen = true
-            } label: { 
+            } label: {
                 Label("Edit", systemImage: "square.and.pencil")
             }
 
@@ -106,17 +106,20 @@ struct DocumentView: View {
 
 struct DocumentView_Previews: PreviewProvider {
     
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     static var previews: some View {
         
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"
         sampleDocument.expiration  = Date(timeIntervalSinceNow: 3 * (60 * 60 * 24))
         sampleDocument.note = "Simple note"
         
+
         return DocumentView(document: sampleDocument)
-        
+
         
         
     }

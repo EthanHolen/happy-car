@@ -2,7 +2,7 @@
 //  Vehicle+CoreDataProperties.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 3/27/21.
+//  Created by Ethan Holen on 4/19/21.
 //
 //
 
@@ -20,9 +20,6 @@ extension Vehicle {
     @NSManaged public var model: String?
     @NSManaged public var name: String?
     @NSManaged public var document: NSSet?
-    
-    
-    
     
     public var wrappedName: String {
         name ?? "Unknown Name"

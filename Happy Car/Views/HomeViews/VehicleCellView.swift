@@ -36,10 +36,12 @@ struct VehicleCellView: View {
 
 struct VehicleRowView_Previews: PreviewProvider {
     
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     
     static var previews: some View {
         
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleVehicle = Vehicle(context: moc)
         sampleVehicle.name = "Sample Car"

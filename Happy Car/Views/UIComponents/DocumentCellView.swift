@@ -40,9 +40,12 @@ struct DocumentCellView: View {
 }
 
 struct DocumentCellView_Previews: PreviewProvider {
+    
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     static var previews: some View {
         
-        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
         
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"
@@ -51,5 +54,6 @@ struct DocumentCellView_Previews: PreviewProvider {
         
         
         return DocumentCellView(document: sampleDocument)
+        
     }
 }
