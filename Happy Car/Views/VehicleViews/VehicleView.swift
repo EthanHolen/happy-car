@@ -80,7 +80,15 @@ struct VehicleView: View {
         }
         .navigationBarTitle(vehicleName)
         .navigationBarItems(trailing: Button(action: {
-            self.showingAddDocumentScreen.toggle()
+            
+            let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
+            
+            if !premiumActive && documents.count >= 3 {
+                print("Nice try chief!")
+            }else{
+                self.showingAddDocumentScreen.toggle()
+            }
+            
         }, label: {
             Image(systemName: "doc.fill.badge.plus")
                 .font(.title2)

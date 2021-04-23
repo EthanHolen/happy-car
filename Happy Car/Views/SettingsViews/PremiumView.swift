@@ -1,0 +1,193 @@
+//
+//  PremiumView.swift
+//  Happy Car
+//
+//  Created by Ethan Holen on 4/20/21.
+//
+
+import SwiftUI
+
+struct PremiumView: View {
+    
+    //    @State private var premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
+    
+    
+    // Premium
+    @AppStorage("PremiumActive") var premiumActive = true
+    
+    
+    
+    var body: some View {
+        
+        
+        VStack{
+            
+            VStack{
+                
+                
+                
+                VStack {
+                    Image(systemName: "car.fill")
+                        .font(.system(size: 50))
+                        .padding(.vertical, 5)
+                    
+                    
+                    Text("Happy Car Premium")
+                        .font(.title)
+                        .bold()
+                    
+                }
+                .padding(.horizontal, 10)
+                .padding(.top, 20)
+                
+                
+                
+                Text("Purchase Happy Car premium to unlock unlimited vehicle and document support, along with custom document naming.")
+                    .font(.footnote)
+                    .padding(.horizontal, 25)
+                
+                
+                
+                if !premiumActive {
+                    Button(action: {
+                        
+                    }, label: {
+                        
+                        VStack {
+                            Text("Purchase Happy Car Premium")
+                                .font(.headline)
+                            Text("$5.99 (One time Purchase)")
+                                .font(.caption)
+                        }
+                        
+                    })
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemBlue))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom,20)
+                } else {
+                    Button(action: {
+                        
+                    }, label: {
+                        
+                        VStack {
+                            Text("Thank you for your Purchase")
+                                .font(.headline)
+                            Text("You're Awesome!")
+                                .font(.caption)
+                        }
+                        
+                    })
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemGreen))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom,20)
+                }
+                
+                
+            }
+            .background(Color(.systemBlue).opacity(0.2))
+            .cornerRadius(10)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .padding(.horizontal, 25)
+            
+            // REMOVE THIS
+            Toggle(isOn: $premiumActive, label: {
+                Text("Test Premium on/off")
+            })
+            .padding()
+            
+        }
+        .navigationTitle("Premium")
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                    // TODO: implement the restore functionality
+                                }, label: {
+                                    Text("Restore")
+                                })
+        )
+        
+        //        VStack{
+        //
+        ////            Spacer()
+        //
+        //            VStack{
+        //
+        //
+        //                Image(systemName: "car.fill")
+        //                    .font(.system(size: 50))
+        ////                    .padding(.vertical, 20)
+        //
+        //
+        //
+        //                Text("Happy Car Premium")
+        //                    .font(.title)
+        //                    .bold()
+        ////                    .padding(.horizontal)
+        //
+        //
+        //                Text("Purchase Happy Car premium to unlock unlimited vehicle and document support, along with custom document naming.")
+        //                    .font(.footnote)
+        ////                    .padding(.horizontal, 23)
+        //
+        //
+        //
+        //                if !premiumActive {
+        //
+        //                    .padding()
+        //                    .background(Color(.systemBlue))
+        //                    .foregroundColor(.white)
+        //                    .cornerRadius(10)
+        //                    .padding(.vertical, 30)
+        //                } else {
+        //                    Button(action: {
+        //
+        //                    }, label: {
+        //
+        //                        VStack {
+        //                            Text("Thank you for your Purchase")
+        //                                .font(.headline)
+        //                            Text("You're Awesome!")
+        //                                .font(.caption)
+        //                        }
+        //                    })
+        //                    .padding()
+        //                    .background(Color(.systemGreen))
+        //                    .foregroundColor(.white)
+        //                    .cornerRadius(10)
+        //                    .padding(.vertical, 30)
+        //                }
+        //
+        //            }
+        //            .padding(.horizontal)
+        //            .background(Color(.systemBlue).opacity(0.2))
+        //            .cornerRadius(15)
+        //            .padding()
+        //
+        //            Spacer()
+        //            // REMOVE THIS
+        //            Toggle(isOn: $premiumActive, label: {
+        //                Text("Test Premium on/off")
+        //            })
+        //        }
+        //        .padding(.vertical, 20)
+        
+        
+    }
+}
+
+struct PremiumView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        return NavigationView{
+            PremiumView()
+        }
+        
+    }
+}

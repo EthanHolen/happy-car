@@ -16,9 +16,19 @@ struct SettingsView: View {
             
             Section {
                 NavigationLink(
-                    destination: Text("Premium Page")
+                    destination: PremiumView()
                     , label: {
-                        SettingCellView(title: "Premium", imgName: "plus", clr: .blue)
+                        SettingCellView(title: "Happy Car Premium", imgName: "plus", clr: .blue)
+                    })
+            }
+            
+            Section {
+                
+                
+                NavigationLink(
+                    destination: Text("Tip jar"),
+                    label: {
+                        SettingCellView(title: "Tip Jar", imgName: "suit.heart", clr: Color(.systemPink))
                     })
             }
             

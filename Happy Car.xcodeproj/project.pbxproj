@@ -33,6 +33,7 @@
 		DADF2CEC262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE8262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift */; };
 		DADF2CED262E60BB00BDFB37 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE9262E60BB00BDFB37 /* Document+CoreDataClass.swift */; };
 		DADF2CEE262E60BB00BDFB37 /* Document+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CEA262E60BB00BDFB37 /* Document+CoreDataProperties.swift */; };
+		DAF43D2A262F8E3800B2D2B6 /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		DADF2CE8262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DADF2CE9262E60BB00BDFB37 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DADF2CEA262E60BB00BDFB37 /* Document+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		DA410CAB2628D880006799B6 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				DA6AC7E3263231F000CE437C /* Purchases */,
 				DA410CAC2628D8A7006799B6 /* DateLogic.swift */,
 			);
 			path = Logic;
@@ -165,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				DA410CC82628DB6B006799B6 /* SettingsView.swift */,
+				DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */,
 			);
 			path = SettingsViews;
 			sourceTree = "<group>";
@@ -189,6 +193,13 @@
 				DA67E1642628E79F00E87438 /* EmptyListButton.swift */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		DA6AC7E3263231F000CE437C /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Purchases;
 			sourceTree = "<group>";
 		};
 		DA80A16A2628A12100897F21 = {
@@ -406,6 +417,7 @@
 				DADF2CEE262E60BB00BDFB37 /* Document+CoreDataProperties.swift in Sources */,
 				DADF2CEC262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift in Sources */,
 				DA67E1792628E82300E87438 /* DocumentCellView.swift in Sources */,
+				DAF43D2A262F8E3800B2D2B6 /* PremiumView.swift in Sources */,
 				DA410CC92628DB6B006799B6 /* SettingsView.swift in Sources */,
 				DA410CBF2628DAA5006799B6 /* VehicleCellView.swift in Sources */,
 				DA80A1792628A12200897F21 /* ContentView.swift in Sources */,
