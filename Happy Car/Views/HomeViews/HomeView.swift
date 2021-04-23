@@ -14,6 +14,8 @@ struct HomeView: View {
     
     @State private var showingAddVehicleScreen = false
     
+
+    
     
     var body: some View {
         NavigationView {
@@ -58,7 +60,17 @@ struct HomeView: View {
                                         Image(systemName: "gear")
                                             .font(.title2)
                                     }), trailing: Button(action: {
-                                        self.showingAddVehicleScreen.toggle()
+                                        
+                                        let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
+
+                                        if !premiumActive && vehicles.count > 0 {
+                                            // TODO: Make an alert popup for purchasing premium
+                                            print("Hey cheapo You havent purchased premium")
+                                        }else {
+                                            self.showingAddVehicleScreen.toggle()
+                                        }
+                                        
+                                        
                                     }, label: {
                                         Image(systemName: "car.2.fill")
                                             .font(.title2)

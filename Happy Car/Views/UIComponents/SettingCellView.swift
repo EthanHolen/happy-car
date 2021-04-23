@@ -18,7 +18,7 @@ struct SettingCellView: View {
             Image(systemName: imgName)
                 .font(.headline)
                 .foregroundColor(.white)
-                .padding(3)
+                .padding(4)
                 .background(clr)
                 .cornerRadius(4)
 

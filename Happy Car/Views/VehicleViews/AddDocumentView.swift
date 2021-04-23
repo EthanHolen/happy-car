@@ -15,6 +15,8 @@ struct AddDocumentView: View {
     @State private var expiration = Date()
     @State private var note = ""
     
+    private var documentTypes = ["ID", "Insurance", "Registration"]
+    
     var vehicleName: String
     var vehicleRequest: FetchRequest<Vehicle>
     var vehicles: FetchedResults<Vehicle>{vehicleRequest.wrappedValue}
@@ -23,11 +25,17 @@ struct AddDocumentView: View {
         self.vehicleName = vehicleName
         
         self.vehicleRequest = FetchRequest(entity: Vehicle.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K == %@", #keyPath(Vehicle.name), vehicleName))
+        
+        
+        let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
+        
+        if premiumActive {
+            self.documentTypes = ["ID", "Insurance", "Registration", "Other..."]
+        }
     }
     
     var body: some View {
         
-        let documentTypes = ["ID", "Insurance", "Registration", "Other..."]
         
         NavigationView {
             Form {
