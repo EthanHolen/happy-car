@@ -20,6 +20,7 @@
 		DA67E1742628E80600E87438 /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1732628E80600E87438 /* AddDocumentView.swift */; };
 		DA67E1792628E82300E87438 /* DocumentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1782628E82300E87438 /* DocumentCellView.swift */; };
 		DA67E1812628EAFF00E87438 /* EditDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1802628EAFF00E87438 /* EditDocumentView.swift */; };
+		DA7F339E263535F9006B3C14 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F339D263535F9006B3C14 /* MailView.swift */; };
 		DA80A1772628A12200897F21 /* Happy_CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1762628A12200897F21 /* Happy_CarApp.swift */; };
 		DA80A1792628A12200897F21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1782628A12200897F21 /* ContentView.swift */; };
 		DA80A17B2628A12300897F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA80A17A2628A12300897F21 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		DA67E1732628E80600E87438 /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
 		DA67E1782628E82300E87438 /* DocumentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCellView.swift; sourceTree = "<group>"; };
 		DA67E1802628EAFF00E87438 /* EditDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDocumentView.swift; sourceTree = "<group>"; };
+		DA7F339D263535F9006B3C14 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DA80A1732628A12100897F21 /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80A1762628A12200897F21 /* Happy_CarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarApp.swift; sourceTree = "<group>"; };
 		DA80A1782628A12200897F21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				DA410CC82628DB6B006799B6 /* SettingsView.swift */,
 				DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */,
+				DA7F339D263535F9006B3C14 /* MailView.swift */,
 			);
 			path = SettingsViews;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				DA410CBF2628DAA5006799B6 /* VehicleCellView.swift in Sources */,
 				DA80A1792628A12200897F21 /* ContentView.swift in Sources */,
 				DA67E1812628EAFF00E87438 /* EditDocumentView.swift in Sources */,
+				DA7F339E263535F9006B3C14 /* MailView.swift in Sources */,
 				DA410CAD2628D8A7006799B6 /* DateLogic.swift in Sources */,
 				DA80A1772628A12200897F21 /* Happy_CarApp.swift in Sources */,
 				DA410CC42628DB00006799B6 /* AddVehicleView.swift in Sources */,

@@ -10,10 +10,11 @@ import SwiftUI
 struct EmptyListButton: View {
     
     let buttonText: String
+    let imageName: String
     
     var body: some View {
         HStack {
-            Image(systemName: "plus")
+            Image(systemName: imageName)
                 .font(.title)
             
             Text(buttonText)
@@ -30,6 +31,6 @@ struct EmptyListButton: View {
 
 struct EmptyListButton_Previews: PreviewProvider {
     static var previews: some View {
-        EmptyListButton(buttonText: "New Item")
+        EmptyListButton(buttonText: "New Item", imageName: "car.fill")
     }
 }

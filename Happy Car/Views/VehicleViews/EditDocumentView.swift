@@ -17,19 +17,47 @@ struct EditDocumentView: View {
     @State private var expiration = Date()
     @State private var note = ""
     
+    private var documentTypes = ["ID", "Insurance", "Registration"]
+    
+    
+    init(document: Document) {
+        
+        self.document = document
+        
+        self._type = State(initialValue: document.wrappedType)
+        self._expiration = State(initialValue: document.wrappedExpiration)
+        self._note = State(initialValue: document.wrappedNote)
+        
+        let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
+        
+        if premiumActive {
+            self.documentTypes = ["ID", "Insurance", "Registration", "Other..."]
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
                 Form {
-                    Section {
-                        TextField(document.wrappedType, text: $type)
+                    Section (header: Image(systemName: "doc.plaintext.fill").font(.title2)) {
+                        //                        TextField(type, text: $type)
+                        
+                        Picker("Document Type", selection: $type) {
+                            ForEach(documentTypes, id: \.self){
+                                Text($0)
+                            }
+                        }
+                        if(type != "ID" && type != "Insurance" && type != "Registration"){
+                            
+                            TextField("Document Type", text: $type)
+                        }
                         
                     }
-                    Section{
+                    Section (header: Image(systemName: "calendar").font(.title2)) {
                         DatePicker("Expiration", selection: $expiration, displayedComponents: .date)
                     }
-                    Section {
-                        TextField(document.wrappedNote, text: $note)
+                    Section (header: Image(systemName: "square.and.pencil").font(.title2)){
+                        TextEditor(text: $note)
                         
                     }
                     
@@ -46,6 +74,7 @@ struct EditDocumentView: View {
                 if self.moc.hasChanges {
                     try? self.moc.save()
                 }
+                self.presentationMode.wrappedValue.dismiss()
                 
                 
             }, label: {
@@ -63,7 +92,7 @@ struct EditDocumentView_Previews: PreviewProvider {
     
     static var previews: some View {
         
-//        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        //        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"

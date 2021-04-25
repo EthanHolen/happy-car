@@ -39,7 +39,7 @@ struct HomeView: View {
                     Button(action: {
                         self.showingAddVehicleScreen.toggle()
                     }, label: {
-                        EmptyListButton(buttonText: "New Vehicle")
+                        EmptyListButton(buttonText: "New Vehicle", imageName: "car.fill")
                     })
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding()
@@ -72,7 +72,7 @@ struct HomeView: View {
                                         
                                         
                                     }, label: {
-                                        Image(systemName: "car.2.fill")
+                                        Image(systemName: "car.fill")
                                             .font(.title2)
                                     }))
             .sheet(isPresented: $showingAddVehicleScreen
@@ -82,7 +82,7 @@ struct HomeView: View {
             
             
         }
-//        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func deleteVehicles(at offsets: IndexSet) {
