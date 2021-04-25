@@ -59,15 +59,16 @@ struct PremiumView: View {
                             Text("$5.99 (One time Purchase)")
                                 .font(.caption)
                         }
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(.systemBlue))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom,20)
                         
                     })
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom,20)
+                    
                 } else {
                     Button(action: {
                         
@@ -79,15 +80,15 @@ struct PremiumView: View {
                             Text("You're Awesome!")
                                 .font(.caption)
                         }
-                        
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color(.systemGreen))
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom,20)
                     })
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(.systemGreen))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom,20)
+                    
                 }
                 
                 

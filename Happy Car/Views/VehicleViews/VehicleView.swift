@@ -72,7 +72,7 @@ struct VehicleView: View {
                 Button(action: {
                     self.showingAddDocumentScreen.toggle()
                 }, label: {
-                    EmptyListButton(buttonText: "New Document")
+                    EmptyListButton(buttonText: "New Document", imageName: "doc.fill.badge.plus")
                 })
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding()

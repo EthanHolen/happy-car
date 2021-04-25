@@ -26,8 +26,9 @@ struct SettingCellView: View {
                 .font(.headline)
                 .padding(.leading, 10)
             
-            Spacer()
+//            Spacer()
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 

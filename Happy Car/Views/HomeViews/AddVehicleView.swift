@@ -18,10 +18,10 @@ struct AddVehicleView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section {
+                Section (header: Image(systemName: "car.fill").font(.title2)){
                     TextField("Name (or nickname)", text: $name)
                 }
-                Section {
+                Section (header: Image(systemName: "car.2.fill").font(.title2)){
                     TextField("Make of Vehicle", text: $make)
                     TextField("Model of Vehicle", text: $model)
                 }

@@ -6,8 +6,23 @@
 //
 
 import SwiftUI
+import MessageUI
+
+enum ActiveSheet: Identifiable {
+    case feature, bug
+    
+    var id: Int {
+        hashValue
+    }
+}
 
 struct SettingsView: View {
+    
+    //    @State private var mailType = "feature"
+    //    @State private var showingMailView = false
+    @State var mailViewResult: Result<MFMailComposeResult, Error>? = nil
+    
+    @State var activeSheet: ActiveSheet?
     
     
     var body: some View {
@@ -57,17 +72,28 @@ struct SettingsView: View {
             
             
             Section {
-                NavigationLink(
-                    destination: Text("Feature Suggestion"),
-                    label: {
-                        SettingCellView(title: "Suggest a Feature", imgName: "star.circle", clr: .yellow)
-                    })
                 
-                NavigationLink(
-                    destination: Text("Bug Report"),
-                    label: {
-                        SettingCellView(title: "Report a Bug", imgName: "exclamationmark.triangle", clr: .red)
-                    })
+                
+                Button(action: {
+                    activeSheet = .feature
+                    //                    self.showingMailView.toggle()
+                    
+                }, label: {
+                    SettingCellView(title: "Suggest a Feature", imgName: "star.circle", clr: .yellow)
+                    
+                })
+                .buttonStyle(PlainButtonStyle())
+                
+                
+                Button(action: {
+                    activeSheet = .bug
+                    //                    self.showingMailView.toggle()
+                    
+                }, label: {
+                    SettingCellView(title: "Report a Bug", imgName: "exclamationmark.triangle", clr: .red)
+                })
+                .buttonStyle(PlainButtonStyle())
+                
             }
             
             
@@ -77,6 +103,15 @@ struct SettingsView: View {
         .listStyle(InsetGroupedListStyle())
         //            .environment(\.horizontalSizeClass, .regular)
         .navigationTitle("Settings")
+        .sheet(item: $activeSheet) { item in
+            switch item {
+            case .feature:
+                MailView(result: self.$mailViewResult, newSubject: "NEW FEATURE", newMsgBody: "")
+            case .bug:
+                MailView(result: self.$mailViewResult, newSubject: "BUG REPORT", newMsgBody: "")
+            }
+        }
+        
         
     }
 }
@@ -87,6 +122,7 @@ struct SettingsView_Previews: PreviewProvider {
         NavigationView{
             SettingsView()
         }
-
+        
+        
     }
 }

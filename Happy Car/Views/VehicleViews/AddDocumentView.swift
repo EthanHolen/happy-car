@@ -39,7 +39,7 @@ struct AddDocumentView: View {
         
         NavigationView {
             Form {
-                Section {
+                Section (header: Image(systemName: "doc.plaintext.fill").font(.title2)) {
                     
                     Picker("Document Type", selection: $type) {
                         ForEach(documentTypes, id: \.self){
@@ -47,17 +47,17 @@ struct AddDocumentView: View {
                         }
                     }
                     if(type != "ID" && type != "Insurance" && type != "Registration"){
-
+                        
                         TextField("Document Type", text: $type)
                     }
-      
+                    
                 }
                 
-                Section{
+                Section (header: Image(systemName: "calendar").font(.title2)) {
                     DatePicker("Expiration", selection: $expiration, displayedComponents: .date)
                 }
                 
-                Section {
+                Section (header: Image(systemName: "square.and.pencil").font(.title2)) {
                     TextArea("Note" , text: $note)
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .padding()
