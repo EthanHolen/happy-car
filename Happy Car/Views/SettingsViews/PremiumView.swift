@@ -93,12 +93,12 @@ struct PremiumView: View {
                 
                 
             }
-            .background(Color(.systemBlue).opacity(0.2))
+//            .background(Color(.systemBlue).opacity(0.2))
             .cornerRadius(10)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal, 25)
             
-            // REMOVE THIS
+            //TESTINGONLY: REMOVE THIS
             Toggle(isOn: $premiumActive, label: {
                 Text("Test Premium on/off")
             })
@@ -113,71 +113,6 @@ struct PremiumView: View {
                                     Text("Restore")
                                 })
         )
-        
-        //        VStack{
-        //
-        ////            Spacer()
-        //
-        //            VStack{
-        //
-        //
-        //                Image(systemName: "car.fill")
-        //                    .font(.system(size: 50))
-        ////                    .padding(.vertical, 20)
-        //
-        //
-        //
-        //                Text("Happy Car Premium")
-        //                    .font(.title)
-        //                    .bold()
-        ////                    .padding(.horizontal)
-        //
-        //
-        //                Text("Purchase Happy Car premium to unlock unlimited vehicle and document support, along with custom document naming.")
-        //                    .font(.footnote)
-        ////                    .padding(.horizontal, 23)
-        //
-        //
-        //
-        //                if !premiumActive {
-        //
-        //                    .padding()
-        //                    .background(Color(.systemBlue))
-        //                    .foregroundColor(.white)
-        //                    .cornerRadius(10)
-        //                    .padding(.vertical, 30)
-        //                } else {
-        //                    Button(action: {
-        //
-        //                    }, label: {
-        //
-        //                        VStack {
-        //                            Text("Thank you for your Purchase")
-        //                                .font(.headline)
-        //                            Text("You're Awesome!")
-        //                                .font(.caption)
-        //                        }
-        //                    })
-        //                    .padding()
-        //                    .background(Color(.systemGreen))
-        //                    .foregroundColor(.white)
-        //                    .cornerRadius(10)
-        //                    .padding(.vertical, 30)
-        //                }
-        //
-        //            }
-        //            .padding(.horizontal)
-        //            .background(Color(.systemBlue).opacity(0.2))
-        //            .cornerRadius(15)
-        //            .padding()
-        //
-        //            Spacer()
-        //            // REMOVE THIS
-        //            Toggle(isOn: $premiumActive, label: {
-        //                Text("Test Premium on/off")
-        //            })
-        //        }
-        //        .padding(.vertical, 20)
         
         
     }

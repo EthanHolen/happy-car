@@ -19,6 +19,7 @@ struct VehicleView: View {
     
     
     @State private var showingAddDocumentScreen = false
+    @State private var showingPremiumAlert = false
     
     
     init(vehicle: Vehicle) {
@@ -84,7 +85,7 @@ struct VehicleView: View {
             let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
             
             if !premiumActive && documents.count >= 3 {
-                print("Nice try chief!")
+                self.showingPremiumAlert.toggle()
             }else{
                 self.showingAddDocumentScreen.toggle()
             }
@@ -95,6 +96,12 @@ struct VehicleView: View {
         }))
         .sheet(isPresented: $showingAddDocumentScreen, content: {
             AddDocumentView(vehicleName: vehicleName).environment(\.managedObjectContext, self.moc)
+        })
+        .alert(isPresented: $showingPremiumAlert, content: {
+            Alert(title: Text("Premium Feature"), message: Text("If you would like to store more than three documents, or add documents with custom names, please purchase the premium version of this app."), dismissButton: .default(Text("Ok")))
+
+
+            
         })
     }
     

@@ -29,6 +29,8 @@
 		DA80A1832628A12300897F21 /* Happy_Car.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1812628A12300897F21 /* Happy_Car.xcdatamodeld */; };
 		DA80A18E2628A12400897F21 /* Happy_CarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A18D2628A12400897F21 /* Happy_CarTests.swift */; };
 		DA80A1992628A12400897F21 /* Happy_CarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1982628A12400897F21 /* Happy_CarUITests.swift */; };
+		DAC0927326365B1100DA7801 /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0927226365B1100DA7801 /* TipView.swift */; };
+		DAC0927826365BD900DA7801 /* TipCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0927726365BD900DA7801 /* TipCellView.swift */; };
 		DAD1358B262F5685007A7DB7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD1358A262F5685007A7DB7 /* CloudKit.framework */; };
 		DADF2CEB262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE7262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift */; };
 		DADF2CEC262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADF2CE8262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift */; };
@@ -83,6 +85,8 @@
 		DA80A1942628A12400897F21 /* Happy CarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Happy CarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80A1982628A12400897F21 /* Happy_CarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarUITests.swift; sourceTree = "<group>"; };
 		DA80A19A2628A12400897F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAC0927226365B1100DA7801 /* TipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
+		DAC0927726365BD900DA7801 /* TipCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCellView.swift; sourceTree = "<group>"; };
 		DAD13585262F567F007A7DB7 /* Happy Car.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy Car.entitlements"; sourceTree = "<group>"; };
 		DAD1358A262F5685007A7DB7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DADF2CE7262E60BB00BDFB37 /* Vehicle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vehicle+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				DA410CC82628DB6B006799B6 /* SettingsView.swift */,
+				DAC0927226365B1100DA7801 /* TipView.swift */,
 				DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */,
 				DA7F339D263535F9006B3C14 /* MailView.swift */,
 			);
@@ -194,6 +199,7 @@
 				DA67E1782628E82300E87438 /* DocumentCellView.swift */,
 				DA410CCD2628DB89006799B6 /* SettingCellView.swift */,
 				DA67E1642628E79F00E87438 /* EmptyListButton.swift */,
+				DAC0927726365BD900DA7801 /* TipCellView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -415,7 +421,9 @@
 				DA410CA62628D764006799B6 /* CalendarExtensions.swift in Sources */,
 				DA410CCE2628DB89006799B6 /* SettingCellView.swift in Sources */,
 				DA67E16F2628E7EB00E87438 /* DocumentView.swift in Sources */,
+				DAC0927826365BD900DA7801 /* TipCellView.swift in Sources */,
 				DA410CBA2628DA75006799B6 /* HomeView.swift in Sources */,
+				DAC0927326365B1100DA7801 /* TipView.swift in Sources */,
 				DA67E1652628E79F00E87438 /* EmptyListButton.swift in Sources */,
 				DADF2CEE262E60BB00BDFB37 /* Document+CoreDataProperties.swift in Sources */,
 				DADF2CEC262E60BB00BDFB37 /* Vehicle+CoreDataProperties.swift in Sources */,

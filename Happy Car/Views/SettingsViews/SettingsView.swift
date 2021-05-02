@@ -41,7 +41,7 @@ struct SettingsView: View {
                 
                 
                 NavigationLink(
-                    destination: Text("Tip jar"),
+                    destination: TipView(),
                     label: {
                         SettingCellView(title: "Tip Jar", imgName: "suit.heart", clr: Color(.systemPink))
                     })
@@ -67,7 +67,7 @@ struct SettingsView: View {
                     destination: Text("Tell a Friend")
                 ) {
                     SettingCellView(title: "Tell a Friend", imgName: "gift", clr: .purple)
-                }
+                } 
             }
             
             

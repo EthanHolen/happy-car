@@ -154,7 +154,7 @@ struct DocumentView_Previews: PreviewProvider {
         
         let sampleDocument = Document(context: moc)
         sampleDocument.type = "Sample Type"
-        sampleDocument.expiration  = Date(timeIntervalSinceNow: 3 * (60 * 60 * 24))
+        sampleDocument.expiration  = Date(timeIntervalSinceNow: 120 * (60 * 60 * 24))
         sampleDocument.note = "This is a note: \nThis is some text relating to the document"
         
         return NavigationView {
