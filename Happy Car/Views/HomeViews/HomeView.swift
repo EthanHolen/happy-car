@@ -13,6 +13,7 @@ struct HomeView: View {
         FetchedResults<Vehicle>
     
     @State private var showingAddVehicleScreen = false
+    @State private var showingPremiumAlert = false
     
 
     
@@ -47,6 +48,7 @@ struct HomeView: View {
 
                     
                 }
+                //TESTINGONLY: REMOVE THIS
                 Button("FILL"){
                     
                     generateData()
@@ -64,8 +66,7 @@ struct HomeView: View {
                                         let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
 
                                         if !premiumActive && vehicles.count > 0 {
-                                            // TODO: Make an alert popup for purchasing premium
-                                            print("Hey cheapo You havent purchased premium")
+                                            self.showingPremiumAlert.toggle()
                                         }else {
                                             self.showingAddVehicleScreen.toggle()
                                         }
@@ -83,6 +84,12 @@ struct HomeView: View {
             
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .alert(isPresented: $showingPremiumAlert, content: {
+            Alert(title: Text("Premium Feature"), message: Text("If you would like to keep multiple vehicles happy please purchase the premium version of this App. 😁"), dismissButton: .default(Text("Ok")))
+
+
+            
+        })
     }
     
     func deleteVehicles(at offsets: IndexSet) {
@@ -99,6 +106,7 @@ struct HomeView: View {
         
         
     }
+    //TESTINGONLY: REMOVE THIS
     func generateData(){
         
         let maggie  = Vehicle(context: self.moc)
