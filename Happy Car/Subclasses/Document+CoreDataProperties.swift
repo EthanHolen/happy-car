@@ -2,7 +2,7 @@
 //  Document+CoreDataProperties.swift
 //  Happy Car
 //
-//  Created by Ethan Holen on 4/19/21.
+//  Created by Ethan Holen on 5/12/21.
 //
 //
 
@@ -19,6 +19,7 @@ extension Document {
     @NSManaged public var expiration: Date?
     @NSManaged public var note: String?
     @NSManaged public var type: String?
+    @NSManaged public var documentID: UUID?
     @NSManaged public var vehicle: Vehicle?
     
     public var wrappedType: String {
