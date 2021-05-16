@@ -95,6 +95,7 @@ struct EditDocumentView_Previews: PreviewProvider {
         //        let moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let sampleDocument = Document(context: moc)
+        sampleDocument.documentID = UUID()
         sampleDocument.type = "Sample Type"
         sampleDocument.expiration  = Date(timeIntervalSinceNow: 3 * (60 * 60 * 24))
         sampleDocument.note = "This is a quick sample not which is probably as long as anyone will want to make one of these TBH \n hey\n hey\n hey"

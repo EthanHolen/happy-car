@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddDocumentView: View {
     @Environment(\.managedObjectContext) var moc
@@ -17,14 +18,14 @@ struct AddDocumentView: View {
     
     private var documentTypes = ["ID", "Insurance", "Registration"]
     
-    var vehicleName: String
+    var vehicleID: UUID
     var vehicleRequest: FetchRequest<Vehicle>
     var vehicles: FetchedResults<Vehicle>{vehicleRequest.wrappedValue}
     
-    init(vehicleName: String) {
-        self.vehicleName = vehicleName
+    init(vehicleID: UUID) {
+        self.vehicleID = vehicleID
         
-        self.vehicleRequest = FetchRequest(entity: Vehicle.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K == %@", #keyPath(Vehicle.name), vehicleName))
+        self.vehicleRequest = FetchRequest(entity: Vehicle.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K == %@", #keyPath(Vehicle.vehicleID), vehicleID as CVarArg))
         
         
         let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
@@ -48,6 +49,7 @@ struct AddDocumentView: View {
                     }
                     if(type != "ID" && type != "Insurance" && type != "Registration"){
                         
+                        
                         TextField("Document Type", text: $type)
                     }
                     
@@ -68,6 +70,7 @@ struct AddDocumentView: View {
             .navigationBarTitle("New Document")
             .navigationBarItems(trailing: Button("Save"){
                 let newDocument = Document(context: self.moc)
+                newDocument.documentID = UUID()
                 newDocument.type = self.type
                 newDocument.expiration = self.expiration
                 newDocument.note = self.note
@@ -87,8 +90,22 @@ struct AddDocumentView: View {
 }
 
 struct AddDocumentView_Previews: PreviewProvider {
+    
+    static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+    
     static var previews: some View {
-        AddDocumentView(vehicleName: "Sample Car")
+        
+        let sampleVehicle = Vehicle(context: moc)
+        sampleVehicle.vehicleID = UUID()
+        sampleVehicle.name = "Sample Car"
+        sampleVehicle.make = "Sample Make"
+        sampleVehicle.model = "Sample Model"
+        
+        return NavigationView{
+            AddDocumentView(vehicleID: sampleVehicle.vehicleID!)
+        }
+        
+        
     }
 }
 

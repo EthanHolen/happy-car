@@ -25,8 +25,11 @@ struct VehicleView: View {
     init(vehicle: Vehicle) {
         self.vehicle = vehicle
         self.vehicleName = vehicle.wrappedName
-        self.documentsRequest = FetchRequest(entity: Document.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Document.type, ascending: true)] , predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.name), vehicle.wrappedName
-        ))
+        self.documentsRequest = FetchRequest(
+            entity: Document.entity(),
+            sortDescriptors: [NSSortDescriptor(keyPath: \Document.type, ascending: true)] ,
+            predicate: NSPredicate(format: "%K == %@", #keyPath(Document.vehicle.vehicleID), vehicle.vehicleID! as CVarArg
+            ))
     }
     
     var body: some View {
@@ -95,12 +98,12 @@ struct VehicleView: View {
                 .font(.title2)
         }))
         .sheet(isPresented: $showingAddDocumentScreen, content: {
-            AddDocumentView(vehicleName: vehicleName).environment(\.managedObjectContext, self.moc)
+            AddDocumentView(vehicleID: vehicle.vehicleID!).environment(\.managedObjectContext, self.moc)
         })
         .alert(isPresented: $showingPremiumAlert, content: {
             Alert(title: Text("Premium Feature"), message: Text("If you would like to store more than three documents, or add documents with custom names, please purchase the premium version of this app."), dismissButton: .default(Text("Ok")))
-
-
+            
+            
             
         })
     }
@@ -125,6 +128,7 @@ struct VehicleView_Previews: PreviewProvider {
     static var previews: some View {
         
         let sampleVehicle = Vehicle(context: moc)
+        sampleVehicle.vehicleID = UUID()
         sampleVehicle.name = "Sample Car"
         sampleVehicle.make = "Sample Make"
         sampleVehicle.model = "Sample Model"

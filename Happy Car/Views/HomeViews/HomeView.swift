@@ -110,17 +110,27 @@ struct HomeView: View {
     func generateData(){
         
         let maggie  = Vehicle(context: self.moc)
+        maggie.vehicleID = UUID()
         maggie.name = "Maggie"
         maggie.make = "Honda"
         maggie.model = "Accord"
         
+        let maggieID = Document(context: self.moc)
+        maggieID.documentID = UUID()
+        maggieID.type = "ID"
+        maggieID.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
+        maggieID.note = "id note"
+        maggieID.vehicle = maggie
+        
         let maggieReg = Document(context: self.moc)
+        maggieReg.documentID = UUID()
         maggieReg.type = "Registration"
         maggieReg.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
         maggieReg.note = "reg note"
         maggieReg.vehicle = maggie
         
         let maggieIns = Document(context: self.moc)
+        maggieIns.documentID = UUID()
         maggieIns.type = "Insurance"
         maggieIns.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
         maggieIns.note = "ins note"
@@ -128,17 +138,27 @@ struct HomeView: View {
         
         //-------
         let oliver  = Vehicle(context: self.moc)
+        oliver.vehicleID = UUID()
         oliver.name = "Oliver"
         oliver.make = "Nissan"
         oliver.model = "Altima"
         
+        let oliverID = Document(context: self.moc)
+        oliverID.documentID = UUID()
+        oliverID.type = "ID"
+        oliverID.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
+        oliverID.note = "id note"
+        oliverID.vehicle = oliver
+        
         let oliverReg = Document(context: self.moc)
+        oliverReg.documentID = UUID()
         oliverReg.type = "Registration"
         oliverReg.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
         oliverReg.note = "reg note"
         oliverReg.vehicle = oliver
         
         let oliverIns = Document(context: self.moc)
+        oliverIns.documentID = UUID()
         oliverIns.type = "Insurance"
         oliverIns.expiration = Date.init(timeIntervalSinceNow: 518400) // 6 Days
         oliverIns.note = "ins note"
@@ -146,17 +166,27 @@ struct HomeView: View {
         
         //-------
         let quincy  = Vehicle(context: self.moc)
+        quincy.vehicleID = UUID()
         quincy.name = "Quincy"
         quincy.make = "Nissan"
         quincy.model = "Murano"
         
+        let quincyID = Document(context: self.moc)
+        quincyID.documentID = UUID()
+        quincyID.type = "ID"
+        quincyID.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
+        quincyID.note = "id note"
+        quincyID.vehicle = quincy
+        
         let quincyReg = Document(context: self.moc)
+        quincyReg.documentID = UUID()
         quincyReg.type = "Registration"
         quincyReg.expiration = Date.init(timeIntervalSinceNow: 4233600) // 49 days
         quincyReg.note = "reg note"
         quincyReg.vehicle = quincy
         
         let quincyIns = Document(context: self.moc)
+        quincyIns.documentID = UUID()
         quincyIns.type = "Insurance"
         quincyIns.expiration = Date.init(timeIntervalSinceNow: 31536000) // 1 year
         quincyIns.note = "ins note"
