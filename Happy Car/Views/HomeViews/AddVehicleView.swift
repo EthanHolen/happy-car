@@ -29,6 +29,7 @@ struct AddVehicleView: View {
             .navigationBarTitle("New Vehicle")
             .navigationBarItems(trailing: Button("Save"){
                 let newVehicle = Vehicle(context: self.moc)
+                newVehicle.vehicleID = UUID()
                 newVehicle.name = self.name
                 newVehicle.make = self.make
                 newVehicle.model = self.model
