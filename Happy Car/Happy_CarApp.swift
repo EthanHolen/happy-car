@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Purchases
 
 @main
 struct Happy_CarApp: App {
     let persistenceController = PersistenceController.shared
     
     @Environment(\.scenePhase) var scenePhase
+    
+    init() {
+        
+        // Initialize RevenueCat
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "KKPJWEFwkPPnsjzoUCgvoIbTVQnLwIqt")
+    }
 
     var body: some Scene {
         WindowGroup {
