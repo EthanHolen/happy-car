@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64E84BC97D8B73576D3F473E /* Pods_Happy_Car_Happy_CarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E1D94BDB691660ACFD14A4 /* Pods_Happy_Car_Happy_CarUITests.framework */; };
+		D8B7D6F8D0EDF6C2D00E4DD2 /* Pods_Happy_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FD5A93F69B8013968690CF /* Pods_Happy_Car.framework */; };
+		DA03188126556C0500E93A08 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03188026556C0500E93A08 /* PurchaseService.swift */; };
+		DA2F8E9426533DD3005A37FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2F8E9326533DD3005A37FF /* StoreKit.framework */; };
 		DA410CA62628D764006799B6 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410CA52628D764006799B6 /* CalendarExtensions.swift */; };
 		DA410CAD2628D8A7006799B6 /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410CAC2628D8A7006799B6 /* DateLogic.swift */; };
 		DA410CBA2628DA75006799B6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410CB92628DA75006799B6 /* HomeView.swift */; };
@@ -37,6 +41,7 @@
 		DAD9EC6D264CE2850095BC28 /* Document+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9EC69264CE2850095BC28 /* Document+CoreDataClass.swift */; };
 		DAD9EC6E264CE2850095BC28 /* Document+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD9EC6A264CE2850095BC28 /* Document+CoreDataProperties.swift */; };
 		DAF43D2A262F8E3800B2D2B6 /* PremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */; };
+		F70A5C0D2F6E5FE2651F7E30 /* Pods_Happy_CarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8574CF44A2C38B5640FB06CB /* Pods_Happy_CarTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05E1D94BDB691660ACFD14A4 /* Pods_Happy_Car_Happy_CarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy_Car_Happy_CarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0941D12B44785C515673A843 /* Pods-Happy Car-Happy CarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy Car-Happy CarUITests.debug.xcconfig"; path = "Target Support Files/Pods-Happy Car-Happy CarUITests/Pods-Happy Car-Happy CarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		14CAACBB926A103EB4A45ECD /* Pods-Happy Car.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy Car.debug.xcconfig"; path = "Target Support Files/Pods-Happy Car/Pods-Happy Car.debug.xcconfig"; sourceTree = "<group>"; };
+		2D4F20354E648B0E6226EA88 /* Pods-Happy Car-Happy CarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy Car-Happy CarUITests.release.xcconfig"; path = "Target Support Files/Pods-Happy Car-Happy CarUITests/Pods-Happy Car-Happy CarUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7512C0AA6A1F4FC678ED98B7 /* Pods-Happy CarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy CarTests.release.xcconfig"; path = "Target Support Files/Pods-Happy CarTests/Pods-Happy CarTests.release.xcconfig"; sourceTree = "<group>"; };
+		8574CF44A2C38B5640FB06CB /* Pods_Happy_CarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy_CarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A2CB79BBC2E5FB024DACF4 /* Pods-Happy Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy Car.release.xcconfig"; path = "Target Support Files/Pods-Happy Car/Pods-Happy Car.release.xcconfig"; sourceTree = "<group>"; };
+		D47C5EBA72CF8991C0E250E0 /* Pods-Happy CarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy CarTests.debug.xcconfig"; path = "Target Support Files/Pods-Happy CarTests/Pods-Happy CarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA03188026556C0500E93A08 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
+		DA2F8E9326533DD3005A37FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DA410CA52628D764006799B6 /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
 		DA410CAC2628D8A7006799B6 /* DateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
 		DA410CB92628DA75006799B6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -94,6 +109,7 @@
 		DAD9EC69264CE2850095BC28 /* Document+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DAD9EC6A264CE2850095BC28 /* Document+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Document+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumView.swift; sourceTree = "<group>"; };
+		E3FD5A93F69B8013968690CF /* Pods_Happy_Car.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy_Car.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD1358B262F5685007A7DB7 /* CloudKit.framework in Frameworks */,
+				DA2F8E9426533DD3005A37FF /* StoreKit.framework in Frameworks */,
+				D8B7D6F8D0EDF6C2D00E4DD2 /* Pods_Happy_Car.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70A5C0D2F6E5FE2651F7E30 /* Pods_Happy_CarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,12 +135,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64E84BC97D8B73576D3F473E /* Pods_Happy_Car_Happy_CarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D313F651000BB2EB48F770A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14CAACBB926A103EB4A45ECD /* Pods-Happy Car.debug.xcconfig */,
+				D1A2CB79BBC2E5FB024DACF4 /* Pods-Happy Car.release.xcconfig */,
+				0941D12B44785C515673A843 /* Pods-Happy Car-Happy CarUITests.debug.xcconfig */,
+				2D4F20354E648B0E6226EA88 /* Pods-Happy Car-Happy CarUITests.release.xcconfig */,
+				D47C5EBA72CF8991C0E250E0 /* Pods-Happy CarTests.debug.xcconfig */,
+				7512C0AA6A1F4FC678ED98B7 /* Pods-Happy CarTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA03187F26556BE600E93A08 /* Purchases */ = {
+			isa = PBXGroup;
+			children = (
+				DA03188026556C0500E93A08 /* PurchaseService.swift */,
+			);
+			path = Purchases;
+			sourceTree = "<group>";
+		};
 		DA410C872628D298006799B6 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +196,7 @@
 		DA410CAB2628D880006799B6 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				DA6AC7E3263231F000CE437C /* Purchases */,
+				DA03187F26556BE600E93A08 /* Purchases */,
 				DA410CAC2628D8A7006799B6 /* DateLogic.swift */,
 			);
 			path = Logic;
@@ -204,13 +245,6 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
-		DA6AC7E3263231F000CE437C /* Purchases */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Purchases;
-			sourceTree = "<group>";
-		};
 		DA80A16A2628A12100897F21 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +253,7 @@
 				DA80A1972628A12400897F21 /* Happy CarUITests */,
 				DA80A1742628A12100897F21 /* Products */,
 				DAD13589262F5685007A7DB7 /* Frameworks */,
+				D313F651000BB2EB48F770A6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -280,7 +315,11 @@
 		DAD13589262F5685007A7DB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA2F8E9326533DD3005A37FF /* StoreKit.framework */,
 				DAD1358A262F5685007A7DB7 /* CloudKit.framework */,
+				E3FD5A93F69B8013968690CF /* Pods_Happy_Car.framework */,
+				05E1D94BDB691660ACFD14A4 /* Pods_Happy_Car_Happy_CarUITests.framework */,
+				8574CF44A2C38B5640FB06CB /* Pods_Happy_CarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,9 +331,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA80A19D2628A12400897F21 /* Build configuration list for PBXNativeTarget "Happy Car" */;
 			buildPhases = (
+				BAFA7F01459C4B77DD55017F /* [CP] Check Pods Manifest.lock */,
 				DA80A16F2628A12100897F21 /* Sources */,
 				DA80A1702628A12100897F21 /* Frameworks */,
 				DA80A1712628A12100897F21 /* Resources */,
+				25C9A4C228ED1DE86A188D74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +350,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA80A1A02628A12400897F21 /* Build configuration list for PBXNativeTarget "Happy CarTests" */;
 			buildPhases = (
+				F7390837DBF3807D8625285B /* [CP] Check Pods Manifest.lock */,
 				DA80A1852628A12400897F21 /* Sources */,
 				DA80A1862628A12400897F21 /* Frameworks */,
 				DA80A1872628A12400897F21 /* Resources */,
@@ -327,9 +369,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA80A1A32628A12400897F21 /* Build configuration list for PBXNativeTarget "Happy CarUITests" */;
 			buildPhases = (
+				D79D1C91CC5A978E8E2E3363 /* [CP] Check Pods Manifest.lock */,
 				DA80A1902628A12400897F21 /* Sources */,
 				DA80A1912628A12400897F21 /* Frameworks */,
 				DA80A1922628A12400897F21 /* Resources */,
+				3E1109CA08579EF55ED917CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,6 +453,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25C9A4C228ED1DE86A188D74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happy Car/Pods-Happy Car-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happy Car/Pods-Happy Car-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happy Car/Pods-Happy Car-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E1109CA08579EF55ED917CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happy Car-Happy CarUITests/Pods-Happy Car-Happy CarUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Happy Car-Happy CarUITests/Pods-Happy Car-Happy CarUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Happy Car-Happy CarUITests/Pods-Happy Car-Happy CarUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAFA7F01459C4B77DD55017F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happy Car-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D79D1C91CC5A978E8E2E3363 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happy Car-Happy CarUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7390837DBF3807D8625285B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Happy CarTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA80A16F2628A12100897F21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -436,6 +583,7 @@
 				DAD9EC6D264CE2850095BC28 /* Document+CoreDataClass.swift in Sources */,
 				DA7F339E263535F9006B3C14 /* MailView.swift in Sources */,
 				DA410CAD2628D8A7006799B6 /* DateLogic.swift in Sources */,
+				DA03188126556C0500E93A08 /* PurchaseService.swift in Sources */,
 				DA80A1772628A12200897F21 /* Happy_CarApp.swift in Sources */,
 				DA410CC42628DB00006799B6 /* AddVehicleView.swift in Sources */,
 				DA67E1742628E80600E87438 /* AddDocumentView.swift in Sources */,
@@ -592,6 +740,7 @@
 		};
 		DA80A19E2628A12400897F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CAACBB926A103EB4A45ECD /* Pods-Happy Car.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -615,6 +764,7 @@
 		};
 		DA80A19F2628A12400897F21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1A2CB79BBC2E5FB024DACF4 /* Pods-Happy Car.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -638,6 +788,7 @@
 		};
 		DA80A1A12628A12400897F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D47C5EBA72CF8991C0E250E0 /* Pods-Happy CarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +811,7 @@
 		};
 		DA80A1A22628A12400897F21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7512C0AA6A1F4FC678ED98B7 /* Pods-Happy CarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -682,6 +834,7 @@
 		};
 		DA80A1A42628A12400897F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0941D12B44785C515673A843 /* Pods-Happy Car-Happy CarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -702,6 +855,7 @@
 		};
 		DA80A1A52628A12400897F21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D4F20354E648B0E6226EA88 /* Pods-Happy Car-Happy CarUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

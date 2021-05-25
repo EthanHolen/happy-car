@@ -55,7 +55,7 @@ struct HomeView: View {
                     
                 }
             }
-            .navigationBarTitle("Happy Car")
+            .navigationBarTitle("Vehicles")
             .navigationBarItems(leading: NavigationLink(
                                     destination: SettingsView(),
                                     label: {

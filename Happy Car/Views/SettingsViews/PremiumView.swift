@@ -13,7 +13,7 @@ struct PremiumView: View {
     
     
     // Premium
-    @AppStorage("PremiumActive") var premiumActive = true
+    @AppStorage("PremiumActive") var premiumActive = false
     
     
     
@@ -50,6 +50,8 @@ struct PremiumView: View {
                 
                 if !premiumActive {
                     Button(action: {
+                        
+                        makePurchase(productId: "premium")
                         
                     }, label: {
                         
@@ -109,6 +111,11 @@ struct PremiumView: View {
         .navigationBarItems(trailing:
                                 Button(action: {
                                     // TODO: implement the restore functionality
+                                    
+                                    PurchaseService.restore(productId: "premium") {
+                                        UserDefaults.standard.setValue(true, forKey: "PremiumActive")
+                                    }
+
                                 }, label: {
                                     Text("Restore")
                                 })
@@ -117,6 +124,22 @@ struct PremiumView: View {
         
     }
 }
+
+
+func makePurchase(productId: String){
+    
+    PurchaseService.purchase(productId: productId) {
+
+        if productId != "" {
+            // Set premium to active on a successful purchase
+            UserDefaults.standard.setValue(true, forKey: "PremiumActive")
+            
+        }
+        
+    }
+    
+}
+
 
 struct PremiumView_Previews: PreviewProvider {
     static var previews: some View {
