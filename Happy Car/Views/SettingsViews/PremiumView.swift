@@ -111,6 +111,11 @@ struct PremiumView: View {
         .navigationBarItems(trailing:
                                 Button(action: {
                                     // TODO: implement the restore functionality
+                                    
+                                    PurchaseService.restore(productId: "premium") {
+                                        UserDefaults.standard.setValue(true, forKey: "PremiumActive")
+                                    }
+
                                 }, label: {
                                     Text("Restore")
                                 })
@@ -134,6 +139,7 @@ func makePurchase(productId: String){
     }
     
 }
+
 
 struct PremiumView_Previews: PreviewProvider {
     static var previews: some View {

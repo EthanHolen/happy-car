@@ -16,9 +16,7 @@ class PurchaseService {
             return
         }
         
-        
-        // TODO: Perform Purchase
-        
+                
         Purchases.shared.products([productId!]) { (products) in
             
             let skProduct = products[0]
@@ -36,4 +34,17 @@ class PurchaseService {
     }
     
     
+    static func restore(productId:String?, successfulRestore:@escaping () -> Void) {
+        
+        Purchases.shared.restoreTransactions { purchaserInfo, error in
+            
+//            print(purchaserInfo?.allPurchasedProductIdentifiers.contains("premium") as Any)
+            if purchaserInfo?.allPurchasedProductIdentifiers.contains("premium") ?? false {
+                successfulRestore()
+            }
+            
+            
+        }
+        
+    }
 }
