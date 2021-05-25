@@ -27,12 +27,20 @@ struct TipView: View {
                 Section {
                     Button(action: {
                         
+                        PurchaseService.purchase(productId: "tip199") {
+                            print("199 Purchased")
+                        }
+                        
                     }, label: {
                         TipCellView(emoji: "☕", name: "Get Ethan a Coffee", price: "$1.99")
                     })
                     .buttonStyle(PlainButtonStyle())
                     
                     Button(action: {
+                        
+                        PurchaseService.purchase(productId: "tip399") {
+                            print("199 Purchased")
+                        }
                         
                     }, label: {
                         TipCellView(emoji: "☕☕", name: "Get Ethan two coffees 😳", price: "$3.99")
@@ -41,12 +49,20 @@ struct TipView: View {
                     
                     Button(action: {
                         
+                        PurchaseService.purchase(productId: "tip699") {
+                            print("199 Purchased")
+                        }
+                        
                     }, label: {
                         TipCellView(emoji: "🌯", name: "Get Ethan a burrito", price: "$6.99")
                     })
                     .buttonStyle(PlainButtonStyle())
                     
                     Button(action: {
+                        
+                        PurchaseService.purchase(productId: "tip999") {
+                            print("199 Purchased")
+                        }
                         
                     }, label: {
                         TipCellView(emoji: "🍛", name: "Get Ethan a poke bowl", price: "$9.99")
