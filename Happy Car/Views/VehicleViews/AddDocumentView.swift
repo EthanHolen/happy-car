@@ -83,6 +83,16 @@ struct AddDocumentView: View {
                 if self.moc.hasChanges {
                     try? self.moc.save()
                 }
+                
+                // Create a notification for the new documents expiration
+                NotificationManager.shared.requestAuthorization { granted in
+                    if granted {
+                        let daysBeforeAlert = UserDefaults.standard.integer(forKey: "DaysBeforeAlert")
+
+                        NotificationManager.shared.createDocumentNotification(document: newDocument, numberOfDaysBefore: daysBeforeAlert)
+                    }
+                }
+                
                 self.presentationMode.wrappedValue.dismiss()
             })
         }

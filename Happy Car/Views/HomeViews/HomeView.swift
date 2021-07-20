@@ -36,6 +36,13 @@ struct HomeView: View {
                         
                     }
                     .listStyle(InsetGroupedListStyle())
+                    .onAppear {
+                        NotificationManager.shared.requestAuthorization { granted in
+                            if granted {
+                                //TODO: Maybe put a bool here for checking notification status
+                            }
+                        }
+                    }
                 } else {
                     Button(action: {
                         self.showingAddVehicleScreen.toggle()
@@ -49,11 +56,21 @@ struct HomeView: View {
                     
                 }
                 //TESTINGONLY: REMOVE THIS
-                Button("FILL"){
-                    
-                    generateData()
-                    
+                HStack {
+                    Button("FILL"){
+                        
+                        generateData()
+                        
+                    }
+                    Spacer()
+                    NavigationLink(destination: NotificationListView()) {
+                        Text("Notifications")
+                    }
                 }
+                .padding()
+                
+                
+                
             }
             .navigationBarTitle("Vehicles")
             .navigationBarItems(leading: NavigationLink(
@@ -96,6 +113,11 @@ struct HomeView: View {
         for offset in offsets {
             let vehicle = vehicles[offset]
             
+            // remove all document notifications
+            for doc in vehicle.documentArray {
+                NotificationManager.shared.removeScheduledNotification(document: doc)
+            }
+            
             moc.delete(vehicle)
         }
         
@@ -109,6 +131,9 @@ struct HomeView: View {
     //TESTINGONLY: REMOVE THIS
     func generateData(){
         
+        
+        let daysBeforeAlert = UserDefaults.standard.integer(forKey: "DaysBeforeAlert")
+        
         let maggie  = Vehicle(context: self.moc)
         maggie.vehicleID = UUID()
         maggie.name = "Maggie"
@@ -121,6 +146,7 @@ struct HomeView: View {
         maggieID.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
         maggieID.note = "id note"
         maggieID.vehicle = maggie
+        NotificationManager.shared.createDocumentNotification(document: maggieID, numberOfDaysBefore: daysBeforeAlert)
         
         let maggieReg = Document(context: self.moc)
         maggieReg.documentID = UUID()
@@ -128,6 +154,7 @@ struct HomeView: View {
         maggieReg.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
         maggieReg.note = "reg note"
         maggieReg.vehicle = maggie
+        NotificationManager.shared.createDocumentNotification(document: maggieReg, numberOfDaysBefore: daysBeforeAlert)
         
         let maggieIns = Document(context: self.moc)
         maggieIns.documentID = UUID()
@@ -135,6 +162,7 @@ struct HomeView: View {
         maggieIns.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
         maggieIns.note = "ins note"
         maggieIns.vehicle = maggie
+        NotificationManager.shared.createDocumentNotification(document: maggieIns, numberOfDaysBefore: daysBeforeAlert)
         
         //-------
         let oliver  = Vehicle(context: self.moc)
@@ -149,6 +177,7 @@ struct HomeView: View {
         oliverID.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
         oliverID.note = "id note"
         oliverID.vehicle = oliver
+        NotificationManager.shared.createDocumentNotification(document: oliverID, numberOfDaysBefore: daysBeforeAlert)
         
         let oliverReg = Document(context: self.moc)
         oliverReg.documentID = UUID()
@@ -156,6 +185,7 @@ struct HomeView: View {
         oliverReg.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
         oliverReg.note = "reg note"
         oliverReg.vehicle = oliver
+        NotificationManager.shared.createDocumentNotification(document: oliverReg, numberOfDaysBefore: daysBeforeAlert)
         
         let oliverIns = Document(context: self.moc)
         oliverIns.documentID = UUID()
@@ -163,6 +193,7 @@ struct HomeView: View {
         oliverIns.expiration = Date.init(timeIntervalSinceNow: 518400) // 6 Days
         oliverIns.note = "ins note"
         oliverIns.vehicle = oliver
+        NotificationManager.shared.createDocumentNotification(document: oliverIns, numberOfDaysBefore: daysBeforeAlert)
         
         //-------
         let quincy  = Vehicle(context: self.moc)
@@ -177,6 +208,7 @@ struct HomeView: View {
         quincyID.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
         quincyID.note = "id note"
         quincyID.vehicle = quincy
+        NotificationManager.shared.createDocumentNotification(document: quincyID, numberOfDaysBefore: daysBeforeAlert)
         
         let quincyReg = Document(context: self.moc)
         quincyReg.documentID = UUID()
@@ -184,6 +216,7 @@ struct HomeView: View {
         quincyReg.expiration = Date.init(timeIntervalSinceNow: 4233600) // 49 days
         quincyReg.note = "reg note"
         quincyReg.vehicle = quincy
+        NotificationManager.shared.createDocumentNotification(document: quincyReg, numberOfDaysBefore: daysBeforeAlert)
         
         let quincyIns = Document(context: self.moc)
         quincyIns.documentID = UUID()
@@ -191,6 +224,7 @@ struct HomeView: View {
         quincyIns.expiration = Date.init(timeIntervalSinceNow: 31536000) // 1 year
         quincyIns.note = "ins note"
         quincyIns.vehicle = quincy
+        NotificationManager.shared.createDocumentNotification(document: quincyIns, numberOfDaysBefore: daysBeforeAlert)
         
         if self.moc.hasChanges  {
             try? self.moc.save()

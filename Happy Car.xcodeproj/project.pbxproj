@@ -24,6 +24,9 @@
 		DA67E1742628E80600E87438 /* AddDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1732628E80600E87438 /* AddDocumentView.swift */; };
 		DA67E1792628E82300E87438 /* DocumentCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1782628E82300E87438 /* DocumentCellView.swift */; };
 		DA67E1812628EAFF00E87438 /* EditDocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA67E1802628EAFF00E87438 /* EditDocumentView.swift */; };
+		DA6A1E0226A74EB0004A6E9E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A1E0126A74EB0004A6E9E /* NotificationManager.swift */; };
+		DA6A1E0426A761BF004A6E9E /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A1E0326A761BF004A6E9E /* NotificationListView.swift */; };
+		DA6A1E0626A777C6004A6E9E /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6A1E0526A777C6004A6E9E /* GeneralSettingsView.swift */; };
 		DA7F339E263535F9006B3C14 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F339D263535F9006B3C14 /* MailView.swift */; };
 		DA80A1772628A12200897F21 /* Happy_CarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1762628A12200897F21 /* Happy_CarApp.swift */; };
 		DA80A1792628A12200897F21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA80A1782628A12200897F21 /* ContentView.swift */; };
@@ -85,6 +88,9 @@
 		DA67E1732628E80600E87438 /* AddDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDocumentView.swift; sourceTree = "<group>"; };
 		DA67E1782628E82300E87438 /* DocumentCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCellView.swift; sourceTree = "<group>"; };
 		DA67E1802628EAFF00E87438 /* EditDocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDocumentView.swift; sourceTree = "<group>"; };
+		DA6A1E0126A74EB0004A6E9E /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DA6A1E0326A761BF004A6E9E /* NotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
+		DA6A1E0526A777C6004A6E9E /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		DA7F339D263535F9006B3C14 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		DA80A1732628A12100897F21 /* Happy Car.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Car.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA80A1762628A12200897F21 /* Happy_CarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Happy_CarApp.swift; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 			children = (
 				DA03187F26556BE600E93A08 /* Purchases */,
 				DA410CAC2628D8A7006799B6 /* DateLogic.swift */,
+				DA6A1E0126A74EB0004A6E9E /* NotificationManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 			children = (
 				DA410CB92628DA75006799B6 /* HomeView.swift */,
 				DA410CC32628DB00006799B6 /* AddVehicleView.swift */,
+				DA6A1E0326A761BF004A6E9E /* NotificationListView.swift */,
 			);
 			path = HomeViews;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				DAC0927226365B1100DA7801 /* TipView.swift */,
 				DAF43D29262F8E3800B2D2B6 /* PremiumView.swift */,
 				DA7F339D263535F9006B3C14 /* MailView.swift */,
+				DA6A1E0526A777C6004A6E9E /* GeneralSettingsView.swift */,
 			);
 			path = SettingsViews;
 			sourceTree = "<group>";
@@ -568,11 +577,14 @@
 				DA410CCE2628DB89006799B6 /* SettingCellView.swift in Sources */,
 				DA67E16F2628E7EB00E87438 /* DocumentView.swift in Sources */,
 				DAC0927826365BD900DA7801 /* TipCellView.swift in Sources */,
+				DA6A1E0426A761BF004A6E9E /* NotificationListView.swift in Sources */,
 				DA410CBA2628DA75006799B6 /* HomeView.swift in Sources */,
 				DAC0927326365B1100DA7801 /* TipView.swift in Sources */,
 				DA67E1652628E79F00E87438 /* EmptyListButton.swift in Sources */,
 				DA67E1792628E82300E87438 /* DocumentCellView.swift in Sources */,
 				DAD9EC6E264CE2850095BC28 /* Document+CoreDataProperties.swift in Sources */,
+				DA6A1E0226A74EB0004A6E9E /* NotificationManager.swift in Sources */,
+				DA6A1E0626A777C6004A6E9E /* GeneralSettingsView.swift in Sources */,
 				DAF43D2A262F8E3800B2D2B6 /* PremiumView.swift in Sources */,
 				DA410CC92628DB6B006799B6 /* SettingsView.swift in Sources */,
 				DAD9EC6C264CE2850095BC28 /* Vehicle+CoreDataProperties.swift in Sources */,
