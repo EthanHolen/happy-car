@@ -112,6 +112,8 @@ struct VehicleView: View {
         for offset in offsets {
             let document = documents[offset]
             
+            NotificationManager.shared.removeScheduledNotification(document: document)
+            
             moc.delete(document)
         }
         

@@ -71,9 +71,22 @@ struct EditDocumentView: View {
                 document.expiration = expiration
                 document.note = note
                 
+                
                 if self.moc.hasChanges {
                     try? self.moc.save()
                 }
+                
+                NotificationManager.shared.requestAuthorization { granted in
+                    if granted {
+                        NotificationManager.shared.removeScheduledNotification(document: document)
+                        let daysBeforeAlert = UserDefaults.standard.integer(forKey: "DaysBeforeAlert")
+                        NotificationManager.shared.createDocumentNotification(document: document, numberOfDaysBefore: daysBeforeAlert)
+                    }
+                }
+                
+                
+                
+                
                 self.presentationMode.wrappedValue.dismiss()
                 
                 

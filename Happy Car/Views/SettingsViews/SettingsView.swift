@@ -51,23 +51,23 @@ struct SettingsView: View {
                 
                 
                 NavigationLink(
-                    destination: Text("General"),
+                    destination: GeneralSettingsView(),
                     label: {
                         SettingCellView(title: "General", imgName: "gear", clr: .gray)
                     })
                 
-                NavigationLink(
-                    destination: Text("Review"),
-                    
-                    label: {
-                        SettingCellView(title: "Write a Review", imgName: "pencil", clr: .green)
-                    })
-                
-                NavigationLink(
-                    destination: Text("Tell a Friend")
-                ) {
-                    SettingCellView(title: "Tell a Friend", imgName: "gift", clr: .purple)
-                } 
+//                NavigationLink(
+//                    destination: Text("Review"),
+//
+//                    label: {
+//                        SettingCellView(title: "Write a Review", imgName: "pencil", clr: .green)
+//                    })
+//
+//                NavigationLink(
+//                    destination: Text("Tell a Friend")
+//                ) {
+//                    SettingCellView(title: "Tell a Friend", imgName: "gift", clr: .purple)
+//                }
             }
             
             
