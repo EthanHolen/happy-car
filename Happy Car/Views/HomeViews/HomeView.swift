@@ -143,7 +143,7 @@ struct HomeView: View {
         let maggieID = Document(context: self.moc)
         maggieID.documentID = UUID()
         maggieID.type = "ID"
-        maggieID.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
+        maggieID.expiration = Date.init(timeIntervalSinceNow: 25 * 86400) // 25 days
         maggieID.note = "id note"
         maggieID.vehicle = maggie
         NotificationManager.shared.createDocumentNotification(document: maggieID, numberOfDaysBefore: daysBeforeAlert)
@@ -151,7 +151,7 @@ struct HomeView: View {
         let maggieReg = Document(context: self.moc)
         maggieReg.documentID = UUID()
         maggieReg.type = "Registration"
-        maggieReg.expiration = Date.init(timeIntervalSinceNow: 0) // 0 Days
+        maggieReg.expiration = Date.init(timeIntervalSinceNow: 0 * 86400) // 0 Days
         maggieReg.note = "reg note"
         maggieReg.vehicle = maggie
         NotificationManager.shared.createDocumentNotification(document: maggieReg, numberOfDaysBefore: daysBeforeAlert)
@@ -159,7 +159,7 @@ struct HomeView: View {
         let maggieIns = Document(context: self.moc)
         maggieIns.documentID = UUID()
         maggieIns.type = "Insurance"
-        maggieIns.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
+        maggieIns.expiration = Date.init(timeIntervalSinceNow: 3 * 86400) // 3 Days
         maggieIns.note = "ins note"
         maggieIns.vehicle = maggie
         NotificationManager.shared.createDocumentNotification(document: maggieIns, numberOfDaysBefore: daysBeforeAlert)
@@ -182,7 +182,7 @@ struct HomeView: View {
         let oliverReg = Document(context: self.moc)
         oliverReg.documentID = UUID()
         oliverReg.type = "Registration"
-        oliverReg.expiration = Date.init(timeIntervalSinceNow: 2160000) // 25 days
+        oliverReg.expiration = Date.init(timeIntervalSinceNow: 25 * 86400) // 25 days
         oliverReg.note = "reg note"
         oliverReg.vehicle = oliver
         NotificationManager.shared.createDocumentNotification(document: oliverReg, numberOfDaysBefore: daysBeforeAlert)
@@ -190,7 +190,7 @@ struct HomeView: View {
         let oliverIns = Document(context: self.moc)
         oliverIns.documentID = UUID()
         oliverIns.type = "Insurance"
-        oliverIns.expiration = Date.init(timeIntervalSinceNow: 518400) // 6 Days
+        oliverIns.expiration = Date.init(timeIntervalSinceNow: 6 * 86400) // 6 Days
         oliverIns.note = "ins note"
         oliverIns.vehicle = oliver
         NotificationManager.shared.createDocumentNotification(document: oliverIns, numberOfDaysBefore: daysBeforeAlert)
@@ -205,7 +205,7 @@ struct HomeView: View {
         let quincyID = Document(context: self.moc)
         quincyID.documentID = UUID()
         quincyID.type = "ID"
-        quincyID.expiration = Date.init(timeIntervalSinceNow: 172800) // 2 Days
+        quincyID.expiration = Date.init(timeIntervalSinceNow: 2 * 86400) // 2 Days
         quincyID.note = "id note"
         quincyID.vehicle = quincy
         NotificationManager.shared.createDocumentNotification(document: quincyID, numberOfDaysBefore: daysBeforeAlert)
@@ -213,7 +213,7 @@ struct HomeView: View {
         let quincyReg = Document(context: self.moc)
         quincyReg.documentID = UUID()
         quincyReg.type = "Registration"
-        quincyReg.expiration = Date.init(timeIntervalSinceNow: 4233600) // 49 days
+        quincyReg.expiration = Date.init(timeIntervalSinceNow: 49 * 86400) // 49 days
         quincyReg.note = "reg note"
         quincyReg.vehicle = quincy
         NotificationManager.shared.createDocumentNotification(document: quincyReg, numberOfDaysBefore: daysBeforeAlert)
@@ -221,7 +221,7 @@ struct HomeView: View {
         let quincyIns = Document(context: self.moc)
         quincyIns.documentID = UUID()
         quincyIns.type = "Insurance"
-        quincyIns.expiration = Date.init(timeIntervalSinceNow: 31536000) // 1 year
+        quincyIns.expiration = Date.init(timeIntervalSinceNow: 365 * 86400) // 1 year
         quincyIns.note = "ins note"
         quincyIns.vehicle = quincy
         NotificationManager.shared.createDocumentNotification(document: quincyIns, numberOfDaysBefore: daysBeforeAlert)

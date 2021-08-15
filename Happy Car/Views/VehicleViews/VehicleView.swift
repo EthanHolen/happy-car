@@ -8,17 +8,25 @@
 import SwiftUI
 import CoreData
 
+enum CurrentActiveSheet: Identifiable {
+    case showingAddDocumentScreen, showingEditVehicleScreen
+    
+    var id: Int {
+        hashValue
+    }
+}
+
 struct VehicleView: View {
     
     @Environment(\.managedObjectContext) var moc
+    
+    @State var activeSheet: CurrentActiveSheet?
     
     var vehicle: Vehicle
     var vehicleName: String
     var documentsRequest: FetchRequest<Document>
     var documents: FetchedResults<Document>{documentsRequest.wrappedValue}
     
-    
-    @State private var showingAddDocumentScreen = false
     @State private var showingPremiumAlert = false
     
     
@@ -54,9 +62,18 @@ struct VehicleView: View {
                     .font(.system(size: 45))
             }
             .padding(.horizontal)
-            //            .background(Color(.blue))
             
             
+            HStack {
+                Button(action: {
+                    activeSheet = .showingEditVehicleScreen
+                }, label: {
+                    Text("Edit")
+                })
+                
+                Spacer()
+            }
+            .padding()
             
             
             if !(documents.isEmpty) {
@@ -74,7 +91,9 @@ struct VehicleView: View {
                 .listStyle(InsetGroupedListStyle())
             } else {
                 Button(action: {
-                    self.showingAddDocumentScreen.toggle()
+                    
+                    activeSheet = .showingAddDocumentScreen
+                    
                 }, label: {
                     EmptyListButton(buttonText: "New Document", imageName: "doc.fill.badge.plus")
                 })
@@ -90,18 +109,36 @@ struct VehicleView: View {
             if !premiumActive && documents.count >= 3 {
                 self.showingPremiumAlert.toggle()
             }else{
-                self.showingAddDocumentScreen.toggle()
+                activeSheet = .showingAddDocumentScreen
+                
             }
             
         }, label: {
             Image(systemName: "doc.fill.badge.plus")
                 .font(.title2)
         }))
-        .sheet(isPresented: $showingAddDocumentScreen, content: {
-            AddDocumentView(vehicleID: vehicle.vehicleID!).environment(\.managedObjectContext, self.moc)
+        .sheet(item: $activeSheet, content: { item in
+            
+            switch item {
+            
+            case .showingEditVehicleScreen:
+                EditVehicleView(vehicle: vehicle).environment(\.managedObjectContext, self.moc)
+                
+            case .showingAddDocumentScreen:
+                AddDocumentView(vehicleID: vehicle.vehicleID!).environment(\.managedObjectContext, self.moc)
+                
+                
+                
+            }
+            
+            
+            
         })
+        //        .sheet(item: $showingEditVehicleScreen, content: {
+        //            EditVehicleView(vehicle: vehicle).environment(\.managedObjectContext, self.moc)
+        //        })
         .alert(isPresented: $showingPremiumAlert, content: {
-            Alert(title: Text("Premium Feature"), message: Text("If you would like to store more than three documents, or add documents with custom names, please purchase the premium version of this app."), dismissButton: .default(Text("Ok")))
+            Alert(title: Text("Premium Feature"), message: Text("If you would like to store more than three documents, or add documents with custom names, please purchase the premium version of this app. 😁"), dismissButton: .default(Text("Ok")))
             
             
             

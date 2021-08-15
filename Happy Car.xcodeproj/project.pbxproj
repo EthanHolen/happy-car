@@ -10,6 +10,7 @@
 		64E84BC97D8B73576D3F473E /* Pods_Happy_Car_Happy_CarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E1D94BDB691660ACFD14A4 /* Pods_Happy_Car_Happy_CarUITests.framework */; };
 		D8B7D6F8D0EDF6C2D00E4DD2 /* Pods_Happy_Car.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3FD5A93F69B8013968690CF /* Pods_Happy_Car.framework */; };
 		DA03188126556C0500E93A08 /* PurchaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03188026556C0500E93A08 /* PurchaseService.swift */; };
+		DA13734126A8986100345745 /* EditVehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13734026A8986100345745 /* EditVehicleView.swift */; };
 		DA2F8E9426533DD3005A37FF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2F8E9326533DD3005A37FF /* StoreKit.framework */; };
 		DA410CA62628D764006799B6 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410CA52628D764006799B6 /* CalendarExtensions.swift */; };
 		DA410CAD2628D8A7006799B6 /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA410CAC2628D8A7006799B6 /* DateLogic.swift */; };
@@ -74,6 +75,7 @@
 		D1A2CB79BBC2E5FB024DACF4 /* Pods-Happy Car.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy Car.release.xcconfig"; path = "Target Support Files/Pods-Happy Car/Pods-Happy Car.release.xcconfig"; sourceTree = "<group>"; };
 		D47C5EBA72CF8991C0E250E0 /* Pods-Happy CarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy CarTests.debug.xcconfig"; path = "Target Support Files/Pods-Happy CarTests/Pods-Happy CarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA03188026556C0500E93A08 /* PurchaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseService.swift; sourceTree = "<group>"; };
+		DA13734026A8986100345745 /* EditVehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVehicleView.swift; sourceTree = "<group>"; };
 		DA2F8E9326533DD3005A37FF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DA410CA52628D764006799B6 /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
 		DA410CAC2628D8A7006799B6 /* DateLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				DA410CB92628DA75006799B6 /* HomeView.swift */,
 				DA410CC32628DB00006799B6 /* AddVehicleView.swift */,
 				DA6A1E0326A761BF004A6E9E /* NotificationListView.swift */,
+				DA13734026A8986100345745 /* EditVehicleView.swift */,
 			);
 			path = HomeViews;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				DA6A1E0626A777C6004A6E9E /* GeneralSettingsView.swift in Sources */,
 				DAF43D2A262F8E3800B2D2B6 /* PremiumView.swift in Sources */,
 				DA410CC92628DB6B006799B6 /* SettingsView.swift in Sources */,
+				DA13734126A8986100345745 /* EditVehicleView.swift in Sources */,
 				DAD9EC6C264CE2850095BC28 /* Vehicle+CoreDataProperties.swift in Sources */,
 				DA410CBF2628DAA5006799B6 /* VehicleCellView.swift in Sources */,
 				DAD9EC6B264CE2850095BC28 /* Vehicle+CoreDataClass.swift in Sources */,

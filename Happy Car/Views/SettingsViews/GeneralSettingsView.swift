@@ -20,9 +20,14 @@ struct GeneralSettingsView: View {
             
             Section(header: Text("Notifications")) {
                 
+                
+                
                 Stepper(value: $alertDays, in: 0...1000) {
                     Text("Alert me \(self.alertDays) days before a document expires")
                 }
+                
+                Text("If you have notifications disabled you can go to the Settings App > Happy Car > Notifications")
+                    .foregroundColor(Color(.systemGray))
                 
                 
             }
