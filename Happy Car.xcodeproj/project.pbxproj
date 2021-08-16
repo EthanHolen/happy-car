@@ -282,6 +282,7 @@
 		DA80A1752628A12100897F21 /* Happy Car */ = {
 			isa = PBXGroup;
 			children = (
+				DADEF7C426C9BEC400DCCB3D /* AlternateIcons */,
 				DAD13585262F567F007A7DB7 /* Happy Car.entitlements */,
 				DA80A1762628A12200897F21 /* Happy_CarApp.swift */,
 				DA410C872628D298006799B6 /* Subclasses */,
@@ -334,6 +335,13 @@
 				8574CF44A2C38B5640FB06CB /* Pods_Happy_CarTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DADEF7C426C9BEC400DCCB3D /* AlternateIcons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlternateIcons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
