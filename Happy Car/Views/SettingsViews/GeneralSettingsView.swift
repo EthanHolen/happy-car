@@ -18,6 +18,17 @@ struct GeneralSettingsView: View {
         
         List {
             
+            Section(header: Text("Icon")) {
+                
+                NavigationLink(
+                    destination: IconSelectionView(),
+                    label: {
+                        Text("Change App Icon")
+                            .foregroundColor(.black)
+                    })
+                
+            }
+            
             Section(header: Text("Notifications")) {
                 
                 
@@ -31,6 +42,7 @@ struct GeneralSettingsView: View {
                 
                 
             }
+            
             
         }
         .listStyle(InsetGroupedListStyle())
