@@ -24,8 +24,9 @@ struct GeneralSettingsView: View {
                     destination: IconSelectionView(),
                     label: {
                         Text("Change App Icon")
-                            .foregroundColor(.black)
+
                     })
+                    .buttonStyle(PlainButtonStyle())
                 
             }
             
