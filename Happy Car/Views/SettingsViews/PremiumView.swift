@@ -101,16 +101,15 @@ struct PremiumView: View {
             .padding(.horizontal, 25)
             
             //TESTINGONLY: REMOVE THIS
-            Toggle(isOn: $premiumActive, label: {
-                Text("Test Premium on/off")
-            })
-            .padding()
+//            Toggle(isOn: $premiumActive, label: {
+//                Text("Test Premium on/off")
+//            })
+//            .padding()
             
         }
         .navigationTitle("Premium")
         .navigationBarItems(trailing:
                                 Button(action: {
-                                    // TODO: implement the restore functionality
                                     
                                     PurchaseService.restore(productId: "premium") {
                                         UserDefaults.standard.setValue(true, forKey: "PremiumActive")

@@ -15,7 +15,9 @@ struct HomeView: View {
     @State private var showingAddVehicleScreen = false
     @State private var showingPremiumAlert = false
     
-
+    @AppStorage("DaysBeforeAlertOld") var daysBeforeAlertOld = 7
+    
+    
     
     
     var body: some View {
@@ -42,6 +44,9 @@ struct HomeView: View {
                                 //TODO: Maybe put a bool here for checking notification status
                             }
                         }
+                        
+                        generateFreshNotifications()
+                        
                     }
                 } else {
                     Button(action: {
@@ -52,22 +57,22 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding()
                     
-
+                    
                     
                 }
-                //TESTINGONLY: REMOVE THIS
-                HStack {
-                    Button("FILL"){
-                        
-                        generateData()
-                        
-                    }
-                    Spacer()
-                    NavigationLink(destination: NotificationListView()) {
-                        Text("Notifications")
-                    }
-                }
-                .padding()
+                //  TESTINGONLY: REMOVE THIS
+//                HStack {
+//                    Button("FILL"){
+//
+//                        generateData()
+//
+//                    }
+//                    Spacer()
+//                    NavigationLink(destination: NotificationListView()) {
+//                        Text("Notifications")
+//                    }
+//                }
+//                .padding()
                 
                 
                 
@@ -81,7 +86,7 @@ struct HomeView: View {
                                     }), trailing: Button(action: {
                                         
                                         let premiumActive = UserDefaults.standard.bool(forKey: "PremiumActive")
-
+                                        
                                         if !premiumActive && vehicles.count > 0 {
                                             self.showingPremiumAlert.toggle()
                                         }else {
@@ -103,8 +108,8 @@ struct HomeView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .alert(isPresented: $showingPremiumAlert, content: {
             Alert(title: Text("Premium Feature"), message: Text("If you would like to keep multiple vehicles happy please purchase the premium version of this App. 😁"), dismissButton: .default(Text("Ok")))
-
-
+            
+            
             
         })
     }
@@ -128,6 +133,38 @@ struct HomeView: View {
         
         
     }
+    
+    func generateFreshNotifications() {
+        
+        let daysBeforeAlert = UserDefaults.standard.integer(forKey: "DaysBeforeAlert")
+        
+        if daysBeforeAlertOld != daysBeforeAlert {
+            for vehicle in vehicles {
+                
+                
+                NotificationManager.shared.requestAuthorization { granted in
+                    if granted {
+                        
+                        for document in vehicle.documentArray {
+                            NotificationManager.shared.removeScheduledNotification(document: document)
+                            let daysBeforeAlert = UserDefaults.standard.integer(forKey: "DaysBeforeAlert")
+                            NotificationManager.shared.createDocumentNotification(document: document, numberOfDaysBefore: daysBeforeAlert)
+                            
+                            print("just created new doc for \(vehicle.wrappedName): \(document.wrappedType)")
+                        }
+                        
+                        
+                    }
+                    
+                }
+            }
+            
+            daysBeforeAlertOld = daysBeforeAlert
+        }
+
+    }
+    
+    
     //TESTINGONLY: REMOVE THIS
     func generateData(){
         
